@@ -4,10 +4,10 @@
   const form = $('risk-form');
   const missing = [...document.querySelectorAll('[data-missing]')];
   let calculated = false;
-  function clearResult(message = '填写左侧指标，查看预测的住院死亡概率。') {
+  function clearResult(message = 'Enter the patient parameters to view the predicted mortality probability.') {
     calculated = false;
     $('risk-number').innerHTML = '—<small>%</small>';
-    $('risk-caption').textContent = '等待计算';
+    $('risk-caption').textContent = 'Awaiting calculation';
     $('gauge').style.setProperty('--risk-angle','0deg');
     $('result-description').textContent = message;
     $('imputed-count').textContent = '—';
@@ -18,12 +18,29 @@
   function syncMissing() {
     missing.forEach(box => { const input = $(box.dataset.missing); input.disabled = box.checked; input.required = !box.checked; });
   }
-  form.addEventListener('input', () => {
+  // Keep validation prompts in English regardless of the browser's UI language.
+  form.addEventListener('invalid', event => {
+    const input = event.target;
+    input.setCustomValidity('');
+    const label = input.labels?.[0]?.textContent.trim().replace(/\s+/g, ' ') || 'this field';
+    if (input.id === 'eligible') {
+      input.setCustomValidity('Confirm the study population and 24-hour ICU landmark eligibility before calculating.');
+    } else if (input.validity.valueMissing) {
+      input.setCustomValidity(input.tagName === 'SELECT' ? `Select Yes or No for ${label}.` : `Enter a value for ${label}.`);
+    } else if (input.validity.rangeUnderflow || input.validity.rangeOverflow) {
+      input.setCustomValidity(input.id === 'age' ? 'Age must be between 18 and 120 years.' : `Check the value and units for ${label}.`);
+    } else {
+      input.setCustomValidity(`Enter a valid number for ${label}.`);
+    }
+  }, true);
+  form.addEventListener('input', event => {
+    event.target.setCustomValidity?.('');
     syncMissing();
-    clearResult('输入已更新，请完成填写后重新计算。');
+    clearResult('Inputs have changed. Complete the form and recalculate.');
     $('example-note').hidden = true;
   });
   form.addEventListener('reset', () => {
+    [...form.elements].forEach(input => input.setCustomValidity?.(''));
     missing.forEach(box => {box.checked = false;});
     syncMissing();
     clearResult();
@@ -40,7 +57,7 @@
     event.preventDefault();
     clearResult();
     try {
-      if (!$('eligible').checked) throw new Error('请先确认研究人群及入 ICU 满 24 小时的适用条件。');
+      if (!$('eligible').checked) throw new Error('Confirm the study population and 24-hour ICU landmark eligibility before calculating.');
       const input = Object.fromEntries(globalThis.CKM_MODEL.variables.map(key => [key,
         $(key).disabled ? null : ($(key).value.trim() === '' ? undefined : Number($(key).value))]));
       const {risk,imputed} = globalThis.CKMEngine.predict(input);
@@ -48,11 +65,11 @@
       const display = pct > 0 && pct < .1 ? '< 0.1' : pct < 100 && pct > 99.9 ? '> 99.9' : pct.toFixed(1);
       $('risk-number').textContent = display;
       const unit = document.createElement('small'); unit.textContent = '%'; $('risk-number').append(unit);
-      $('risk-caption').textContent = '预测住院死亡概率';
+      $('risk-caption').textContent = 'Predicted mortality probability';
       $('gauge').style.setProperty('--risk-angle',`${risk*360}deg`);
-      $('result-description').textContent = '入 ICU 满 24 小时后，同一次住院期间的模型预测死亡概率。';
-      $('imputed-count').textContent = `${imputed} / 9 项`;
-      $('result-timestamp').textContent = `本次计算：${new Date().toLocaleString('zh-CN',{hour12:false})}`;
+      $('result-description').textContent = 'Model-predicted probability of subsequent death during the same hospitalization, at the 24-hour ICU landmark.';
+      $('imputed-count').textContent = `${imputed} / 9`;
+      $('result-timestamp').textContent = `Calculated: ${new Date().toLocaleString('en-GB',{hour12:false})}`;
       $('result-timestamp').hidden = false;
       $('print').hidden = false;
       calculated = true;
@@ -65,17 +82,17 @@
   $('print').addEventListener('click',() => {if(calculated) window.print();});
   try {
     const reference = Object.fromEntries(globalThis.CKM_MODEL.variables.map((k,i) => [k,[23,21,0,10,25,0,80,67,1.1][i]]));
-    if (Math.abs(globalThis.CKMEngine.predict(reference).risk-.034412096254527569)>1e-7) throw new Error('模型校验失败');
+    if (Math.abs(globalThis.CKMEngine.predict(reference).risk-.034412096254527569)>1e-7) throw new Error('Model verification failed');
     reference['bicarbonate_mEq.L_min'] = null;
-    if (Math.abs(globalThis.CKMEngine.predict(reference).risk-.044328317325562236)>1e-7) throw new Error('插补校验失败');
-    $('model-status').textContent = '模型已就绪';
+    if (Math.abs(globalThis.CKMEngine.predict(reference).risk-.044328317325562236)>1e-7) throw new Error('Imputation verification failed');
+    $('model-status').textContent = 'Model ready';
     $('model-status').classList.add('ready');
     $('calculate').disabled = false;
   } catch(error) {
-    $('model-status').textContent = '模型加载失败';
+    $('model-status').textContent = 'Model unavailable';
     $('model-status').classList.add('failed');
     $('example').disabled = true;
-    $('form-error').textContent = '模型加载或校验失败，请刷新重试，并确认 model-data.js 和 engine.js 文件完整。';
+    $('form-error').textContent = 'The model could not be loaded or verified. Refresh the page and try again. If the problem persists, contact the site administrator.';
     $('form-error').hidden = false;
   }
 })();

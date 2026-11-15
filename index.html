@@ -1,78 +1,78 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="CKM 九变量 XGBoost 住院死亡风险研究计算器。入 ICU 满 24 小时节点预测，全部计算在浏览器本地完成。">
+  <meta name="description" content="A nine-predictor XGBoost research calculator for in-hospital mortality in adults with CKM. Prediction at 24 hours after ICU admission, entirely in your browser.">
   <meta name="theme-color" content="#0d655b">
-  <title>CKM · 住院死亡风险计算器</title>
+  <title>CKM4 · In-hospital Mortality Risk Calculator</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261115-en1">
   <script defer src="model-data.js"></script>
-  <script defer src="engine.js"></script>
-  <script defer src="app.js"></script>
+  <script defer src="engine.js?v=20261115-en1"></script>
+  <script defer src="app.js?v=20261115-en1"></script>
 </head>
 <body>
-<a class="skip" href="#calculator">跳到计算器</a>
+<a class="skip" href="#calculator">Skip to calculator</a>
 <header class="topbar"><div class="shell topbar-inner">
-  <a class="brand" href="./" aria-label="CKM 首页"><span class="brand-icon" aria-hidden="true">✳</span><span>CKM<span class="brand-sub">RISK CALCULATOR</span></span></a>
-  <div class="top-meta"><span class="tag">研究演示</span><span id="model-status" class="status" role="status">模型加载中</span></div>
+  <a class="brand" href="./" aria-label="CKM4 home"><span class="brand-icon" aria-hidden="true">✳</span><span>CKM4<span class="brand-sub">RISK CALCULATOR</span></span></a>
+  <div class="top-meta"><span class="tag">Research prototype</span><span id="model-status" class="status" role="status">Loading model</span></div>
 </div></header>
 <main class="shell">
   <section class="intro">
     <div class="eyebrow"><span></span> ICU · 24-HOUR LANDMARK</div>
-    <h1>住院死亡风险<span>预测计算器</span></h1>
-    <p class="lead">基于九项临床指标，估计符合研究定义的成年 CKM 患者，<br class="desktop-break">在入 ICU 满 24 小时后、同一次住院期间的死亡概率。</p>
-    <div class="intro-facts"><span><b>09</b> 项预测变量</span><span><b>20</b> 个锁定模型</span><span class="local-fact"><i aria-hidden="true">⌁</i> 浏览器本地计算 · 输入不上传</span></div>
+    <h1>In-hospital mortality <span>risk calculator</span></h1>
+    <p class="lead">Use nine clinical predictors to estimate the probability of subsequent in-hospital death<br class="desktop-break"> at the 24-hour ICU landmark in adults meeting the study definition of CKM.</p>
+    <div class="intro-facts"><span><b>09</b> predictors</span><span><b>20</b> locked models</span><span class="local-fact"><i aria-hidden="true">⌁</i> Computed locally · No input uploads</span></div>
   </section>
   <div class="workspace" id="calculator">
     <section class="input-panel card" aria-labelledby="input-heading">
-      <div class="panel-heading"><div><span class="eyebrow">PATIENT PARAMETERS</span><h2 id="input-heading">填写预测指标</h2></div><button type="button" id="example" class="text-button">填入演示数据 <span aria-hidden="true">↗</span></button></div>
-      <p class="panel-note">仅使用预测节点前已获得的信息。未知诊断不能选择“无”。</p>
+      <div class="panel-heading"><div><span class="eyebrow">PATIENT PARAMETERS</span><h2 id="input-heading">Enter patient parameters</h2></div><button type="button" id="example" class="text-button">Load example <span aria-hidden="true">↗</span></button></div>
+      <p class="panel-note">Use only information available by the prediction time. Do not enter an unknown diagnosis as “No.”</p>
       <form id="risk-form">
-        <fieldset><legend><span class="section-number">01</span> 基本信息与诊断</legend><div class="field-grid three">
-          <div class="field"><label for="age">年龄 <span>Age</span></label><div class="input-wrap"><input id="age" name="age" type="number" min="18" max="120" step="any" placeholder="18–120" required inputmode="decimal" aria-describedby="age-help"><span>岁</span></div><p id="age-help" class="help">入院时年龄，仅适用于成人</p></div>
-          <div class="field"><label for="stroke">卒中 <span>Stroke</span></label><select id="stroke" name="stroke" required aria-describedby="diagnosis-help"><option value="">请选择</option><option value="0">无 · No</option><option value="1">有 · Yes</option></select><p id="diagnosis-help" class="help">截至预测节点已明确的诊断</p></div>
-          <div class="field"><label for="af">房颤 <span>AF</span></label><select id="af" name="af" required aria-describedby="af-help"><option value="">请选择</option><option value="0">无 · No</option><option value="1">有 · Yes</option></select><p id="af-help" class="help">未知状态不能填为“无”</p></div>
+        <fieldset><legend><span class="section-number">01</span> Patient information &amp; diagnoses</legend><div class="field-grid three">
+          <div class="field"><label for="age">Age</label><div class="input-wrap"><input id="age" name="age" type="number" min="18" max="120" step="any" placeholder="18–120" required inputmode="decimal" aria-describedby="age-help"><span>years</span></div><p id="age-help" class="help">Age at admission; adults only</p></div>
+          <div class="field"><label for="stroke">Stroke</label><select id="stroke" name="stroke" required aria-describedby="diagnosis-help"><option value="">Select</option><option value="0">No</option><option value="1">Yes</option></select><p id="diagnosis-help" class="help">Diagnosis established by the prediction time</p></div>
+          <div class="field"><label for="af">Atrial fibrillation <span>AF</span></label><select id="af" name="af" required aria-describedby="af-help"><option value="">Select</option><option value="0">No</option><option value="1">Yes</option></select><p id="af-help" class="help">Unknown status must not be entered as “No”</p></div>
         </div></fieldset>
-        <fieldset><legend><span class="section-number">02</span> 实验室指标</legend><div class="field-grid three">
-          <div class="field"><label for="bicarbonate_mEq.L_min">碳酸氢盐 <span>HCO₃⁻</span></label><div class="input-wrap"><input id="bicarbonate_mEq.L_min" name="bicarbonate_mEq.L_min" type="number" min="0" step="any" required placeholder="请输入" inputmode="decimal" aria-describedby="bicarb-help"><span>mEq/L</span></div><p id="bicarb-help" class="help">首 24 小时最小值<br>与 mmol/L 数值相同</p><label class="missing"><input type="checkbox" data-missing="bicarbonate_mEq.L_min">缺失，使用固定插补</label></div>
-          <div class="field"><label for="wbc">白细胞计数 <span>WBC</span></label><div class="input-wrap"><input id="wbc" name="wbc" type="number" min="0" step="any" required placeholder="请输入" inputmode="decimal" aria-describedby="wbc-help"><span>10⁹/L</span></div><p id="wbc-help" class="help">入 ICU 前 6 小时至入科后<br>24 小时的最小值</p></div>
-          <div class="field"><label for="bun_mg.dL_min">血尿素氮 <span>BUN</span></label><div class="input-wrap"><input id="bun_mg.dL_min" name="bun_mg.dL_min" type="number" min="0" step="any" required placeholder="请输入" inputmode="decimal" aria-describedby="bun-help"><span>mg/dL</span></div><p id="bun-help" class="help">首 24 小时最小值<br>请勿直接填入尿素 mmol/L</p></div>
+        <fieldset><legend><span class="section-number">02</span> Laboratory measurements</legend><div class="field-grid three">
+          <div class="field"><label for="bicarbonate_mEq.L_min">Bicarbonate <span>HCO₃⁻</span></label><div class="input-wrap"><input id="bicarbonate_mEq.L_min" name="bicarbonate_mEq.L_min" type="number" min="0" step="any" required placeholder="Enter value" inputmode="decimal" aria-describedby="bicarb-help"><span>mEq/L</span></div><p id="bicarb-help" class="help">Minimum in the first 24 hours; numerically equivalent to mmol/L</p><label class="missing"><input type="checkbox" data-missing="bicarbonate_mEq.L_min">Unavailable: use locked imputer</label></div>
+          <div class="field"><label for="wbc">White blood cell count <span>WBC</span></label><div class="input-wrap"><input id="wbc" name="wbc" type="number" min="0" step="any" required placeholder="Enter value" inputmode="decimal" aria-describedby="wbc-help"><span>10⁹/L</span></div><p id="wbc-help" class="help">Minimum from 6 hours before to 24 hours after ICU admission</p></div>
+          <div class="field"><label for="bun_mg.dL_min">Blood urea nitrogen <span>BUN</span></label><div class="input-wrap"><input id="bun_mg.dL_min" name="bun_mg.dL_min" type="number" min="0" step="any" required placeholder="Enter value" inputmode="decimal" aria-describedby="bun-help"><span>mg/dL</span></div><p id="bun-help" class="help">Minimum in the first 24 hours. Do not enter unconverted urea in mmol/L</p></div>
         </div></fieldset>
-        <fieldset><legend><span class="section-number">03</span> 生命体征与代谢</legend><div class="field-grid three">
-          <div class="field"><label for="resp_rate_mean">呼吸频率 <span>RR</span></label><div class="input-wrap"><input id="resp_rate_mean" name="resp_rate_mean" type="number" min="0" step="any" required placeholder="请输入" inputmode="decimal" aria-describedby="rr-help"><span>次/分</span></div><p id="rr-help" class="help">首 24 小时均值</p><label class="missing"><input type="checkbox" data-missing="resp_rate_mean">缺失，使用固定插补</label></div>
-          <div class="field"><label for="mbp_mean">平均动脉压 <span>MAP</span></label><div class="input-wrap"><input id="mbp_mean" name="mbp_mean" type="number" min="0" step="any" required placeholder="请输入" inputmode="decimal" aria-describedby="map-help"><span>mmHg</span></div><p id="map-help" class="help">首 24 小时均值，非单次值</p><label class="missing"><input type="checkbox" data-missing="mbp_mean">缺失，使用固定插补</label></div>
-          <div class="field"><label for="SHR">应激性高血糖比值 <span>SHR</span></label><div class="input-wrap"><input id="SHR" name="SHR" type="number" min="0" step="any" required placeholder="请输入" inputmode="decimal" aria-describedby="shr-help"><span>无量纲</span></div><p id="shr-help" class="help">请输入已计算的 SHR<br>不能直接填入血糖值</p></div>
+        <fieldset><legend><span class="section-number">03</span> Vital signs &amp; metabolism</legend><div class="field-grid three">
+          <div class="field"><label for="resp_rate_mean">Respiratory rate <span>RR</span></label><div class="input-wrap"><input id="resp_rate_mean" name="resp_rate_mean" type="number" min="0" step="any" required placeholder="Enter value" inputmode="decimal" aria-describedby="rr-help"><span>/min</span></div><p id="rr-help" class="help">Mean over the first 24 hours</p><label class="missing"><input type="checkbox" data-missing="resp_rate_mean">Unavailable: use locked imputer</label></div>
+          <div class="field"><label for="mbp_mean">Mean arterial pressure <span>MAP</span></label><div class="input-wrap"><input id="mbp_mean" name="mbp_mean" type="number" min="0" step="any" required placeholder="Enter value" inputmode="decimal" aria-describedby="map-help"><span>mmHg</span></div><p id="map-help" class="help">Mean over the first 24 hours, not a single reading</p><label class="missing"><input type="checkbox" data-missing="mbp_mean">Unavailable: use locked imputer</label></div>
+          <div class="field"><label for="SHR">Stress hyperglycemia ratio <span>SHR</span></label><div class="input-wrap"><input id="SHR" name="SHR" type="number" min="0" step="any" required placeholder="Enter value" inputmode="decimal" aria-describedby="shr-help"><span>unitless</span></div><p id="shr-help" class="help">Enter the calculated SHR, not a glucose value</p></div>
         </div></fieldset>
-        <details class="formula"><summary>如何计算 SHR？</summary><p>SHR = 入院血糖（mg/dL）÷ [28.7 × HbA1c（%）− 46.7]。</p><p>如血糖以 mmol/L 计，先按研究所用规则换算为 mg/dL。所有测量须在预测节点可获得。</p></details>
-        <label class="eligibility"><input id="eligible" type="checkbox" required><span>我确认该患者符合研究中成人 CKM 人群定义，且入 ICU 满 24 小时时仍存活。</span></label>
+        <details class="formula"><summary>How is SHR calculated?</summary><p>SHR = admission glucose (mg/dL) ÷ [28.7 × HbA1c (%) − 46.7].</p><p>If glucose is measured in mmol/L, convert it to mg/dL using the study convention first. All measurements must be available by the prediction time.</p></details>
+        <label class="eligibility"><input id="eligible" type="checkbox" required><span>I confirm that this adult patient meets the study CKM eligibility criteria and was alive 24 hours after ICU admission.</span></label>
         <div id="form-error" class="error" role="alert" hidden></div>
-        <div class="form-actions"><button type="submit" id="calculate" class="primary" disabled>计算死亡风险 <span aria-hidden="true">→</span></button><button type="reset" class="reset">清空</button></div>
-        <p id="example-note" class="example-note" role="status" hidden>已填入人工合成演示数据，非真实患者。请确认适用条件后计算。</p>
+        <div class="form-actions"><button type="submit" id="calculate" class="primary" disabled>Calculate mortality risk <span aria-hidden="true">→</span></button><button type="reset" class="reset">Reset</button></div>
+        <p id="example-note" class="example-note" role="status" hidden>Synthetic example loaded; these are not real patient data. Confirm eligibility before calculating.</p>
       </form>
     </section>
     <aside class="results-column">
       <section class="result-card card" aria-labelledby="result-heading">
-        <div class="result-heading"><div><span class="eyebrow">PREDICTED PROBABILITY</span><h2 id="result-heading">预测结果</h2></div><span class="result-dot" aria-hidden="true"></span></div>
+        <div class="result-heading"><div><span class="eyebrow">PREDICTED PROBABILITY</span><h2 id="result-heading">Predicted risk</h2></div><span class="result-dot" aria-hidden="true"></span></div>
         <div id="result-content" aria-live="polite" aria-atomic="true">
-          <div class="gauge" id="gauge"><div class="gauge-center"><span id="risk-number" class="risk-number">—<small>%</small></span><span id="risk-caption">等待计算</span></div></div>
-          <p id="result-description" class="result-description">填写左侧指标，<br>查看预测的住院死亡概率。</p>
-          <div class="result-data"><div><span>预测节点</span><b>入 ICU 满 24 小时</b></div><div><span>预测结局</span><b>此后同次住院期间死亡</b></div><div><span>插补指标</span><b id="imputed-count">—</b></div></div>
+          <div class="gauge" id="gauge"><div class="gauge-center"><span id="risk-number" class="risk-number">—<small>%</small></span><span id="risk-caption">Awaiting calculation</span></div></div>
+          <p id="result-description" class="result-description">Enter the patient parameters<br>to view the predicted mortality probability.</p>
+          <div class="result-data"><div><span>Prediction time</span><b>24 hours after ICU admission</b></div><div><span>Outcome</span><b>Subsequent in-hospital death</b></div><div><span>Imputed inputs</span><b id="imputed-count">—</b></div></div>
           <p id="result-timestamp" class="result-timestamp" hidden></p>
         </div>
-        <button type="button" id="print" class="print-button" hidden>打印 / 保存结果为 PDF ↗</button>
-        <p class="result-footnote">概率不等于确定结局。本工具不提供个体风险的 95% 置信区间。</p>
+        <button type="button" id="print" class="print-button" hidden>Print / save result as PDF ↗</button>
+        <p class="result-footnote">A probability is not a certain outcome. No individual 95% confidence interval is provided.</p>
       </section>
-      <section class="interpretation"><span class="note-icon" aria-hidden="true">i</span><div><h3>如何理解结果</h3><p>本结果用于研究演示，不能替代临床判断。模型尚未经前瞻性临床实施评估；改变某项指标不意味着会改变死亡风险。</p></div></section>
-      <section class="privacy"><span aria-hidden="true">◇</span><div><b>数据留在你的浏览器</b><p>无需登录，不上传、不保存输入数据。修改指标后需重新计算。</p></div></section>
+      <section class="interpretation"><span class="note-icon" aria-hidden="true">i</span><div><h3>Interpreting the result</h3><p>This research prototype does not replace clinical judgment. Prospective clinical implementation has not been evaluated. Changing a predictor does not imply a change in mortality risk.</p></div></section>
+      <section class="privacy"><span aria-hidden="true">◇</span><div><b>Your data stay in your browser</b><p>No sign-in, uploads, or storage of patient entries. Recalculate after changing any input.</p></div></section>
     </aside>
   </div>
   <section class="model-details card">
-    <details><summary><span><span class="eyebrow">MODEL NOTES</span><b>模型与验证说明</b></span><span class="expand-icon" aria-hidden="true">＋</span></summary><div class="details-body"><p>模型标识：<code>CKM-SHR-XGB9-20261113</code>。将 20 个固定 XGBoost 子模型的概率取平均，每个子模型含 100 棵树。不在浏览器中重新训练或调整参数。</p><p>仅碳酸氢盐、呼吸频率、平均动脉压允许明确选择缺失。使用原训练集固定的、不含结局的 FCS-PMM 插补器：20 次插补、10 轮、5 个候选供体，单例种子为 20261113。同样输入得到同样结果。单例插补抽样可能与论文原始批量预测不同。</p><p>原资料报告内部测试 AUC 为 0.7758，外部 AUC 为 0.7937。开发数据的 WBC、BUN、碳酸氢盐使用最小值，外部数据使用首 24 小时均值，SHR 的汇总方式也存在差异。上述性能来自原资料，前端移植的数值核对不构成新的临床验证。</p><p>参考合成病例完整输入风险为 3.4412096%；仅碳酸氢盐缺失时为 4.4328317%。<a href="verification-report.json" target="_blank" rel="noopener">查看前端数值核对报告 ↗</a></p></div></details>
+    <details><summary><span><span class="eyebrow">MODEL NOTES</span><b>Model &amp; validation details</b></span><span class="expand-icon" aria-hidden="true">＋</span></summary><div class="details-body"><p>Model ID: <code>CKM-SHR-XGB9-20261113</code>. Risk is averaged across 20 locked XGBoost models, each with 100 trees. No training or parameter updates occur in the browser.</p><p>Explicit missingness is supported only for bicarbonate, respiratory rate, and mean arterial pressure. The frozen, outcome-free FCS-PMM training imputer uses 20 imputations, 10 iterations, and 5 candidate donors, with a fixed single-case seed of 20261113. Identical inputs produce identical results. Single-case imputation draws may differ from the original study’s batch predictions.</p><p>The source materials report an internal-test AUC of 0.7758 and an external AUC of 0.7937. Development data use minimum WBC, BUN, and bicarbonate values; external data use first-24-hour means. SHR aggregation also differs. These performance estimates come from the source study; numerical checks of this browser implementation do not constitute new clinical validation.</p><p>The reference synthetic case has a risk of 3.4412096% with complete inputs and 4.4328317% when only bicarbonate is missing. <a href="verification-report.json" target="_blank" rel="noopener">View numerical verification report ↗</a></p></div></details>
   </section>
-  <noscript><p class="error">请启用 JavaScript，才能加载模型并进行本地计算。</p></noscript>
+  <noscript><p class="error">Enable JavaScript to load the model and calculate locally.</p></noscript>
 </main>
-<footer class="shell footer"><span>CKM · 九变量住院死亡风险模型</span><span>研究用途 · CKM-SHR-XGB9-20261113</span></footer>
+<footer class="shell footer"><span>CKM · Nine-predictor in-hospital mortality model</span><span>For research use · CKM-SHR-XGB9-20261113</span></footer>
 </body>
 </html>

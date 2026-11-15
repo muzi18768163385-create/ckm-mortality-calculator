@@ -1,17 +1,17 @@
 /* Locked CKM model inference. No dependencies, networking, storage or training. */
 (function (root) {
   'use strict';
-  const labels = ['碳酸氢盐', '呼吸频率', '卒中', '白细胞计数', '血尿素氮', '房颤', '平均动脉压', '年龄', 'SHR'];
+  const labels = ['bicarbonate', 'respiratory rate', 'stroke status', 'white blood cell count', 'blood urea nitrogen', 'atrial fibrillation status', 'mean arterial pressure', 'age', 'SHR'];
   function validate(input, model) {
     return model.variables.map((key, i) => {
       const v = input[key];
       if (v === null && model.missing_indices.includes(i)) return null;
-      if (typeof v !== 'number' || !Number.isFinite(v)) throw new Error(`请填写有效的${labels[i]}。`);
-      if ((i === 2 || i === 5) && v !== 0 && v !== 1) throw new Error('卒中和房颤须明确选择有或无，未知不能填无。');
-      if (i === 7 && (v < 18 || v > 120)) throw new Error('年龄须为 18–120 岁。');
-      if ([0,1,3,6,8].includes(i) && v <= 0) throw new Error(`${labels[i]}必须大于 0，请核对单位。`);
-      if (i === 4 && v < 0) throw new Error('血尿素氮不能小于 0。');
-      if (!Number.isFinite(Math.fround(v))) throw new Error(`${labels[i]}超出模型数值范围。`);
+      if (typeof v !== 'number' || !Number.isFinite(v)) throw new Error(`Enter a valid value for ${labels[i]}.`);
+      if ((i === 2 || i === 5) && v !== 0 && v !== 1) throw new Error('Select Yes or No for stroke and atrial fibrillation. Unknown status must not be entered as No.');
+      if (i === 7 && (v < 18 || v > 120)) throw new Error('Age must be between 18 and 120 years.');
+      if ([0,1,3,6,8].includes(i) && v <= 0) throw new Error(`The value for ${labels[i]} must be greater than 0. Check the units.`);
+      if (i === 4 && v < 0) throw new Error('Blood urea nitrogen must not be negative.');
+      if (!Number.isFinite(Math.fround(v))) throw new Error(`The value for ${labels[i]} exceeds the model’s numeric range.`);
       return v;
     });
   }
@@ -27,7 +27,7 @@
     return b.value[selected];
   }
   function predict(input, model = root.CKM_MODEL) {
-    if (!model) throw new Error('模型尚未加载，请刷新页面。');
+    if (!model) throw new Error('The model has not loaded. Refresh the page.');
     const x = validate(input, model);
     const mask = model.missing_indices.reduce((m, i, j) => m | (x[i] === null ? 1 << j : 0), 0);
     let draw = 0;
@@ -53,7 +53,7 @@
       return Math.fround(1 / Math.fround(1 + Math.fround(Math.exp(-margin))));
     });
     const risk = probabilities.reduce((a,b) => a+b,0) / probabilities.length;
-    if (!Number.isFinite(risk) || risk < 0 || risk > 1) throw new Error('计算失败，请检查输入。');
+    if (!Number.isFinite(risk) || risk < 0 || risk > 1) throw new Error('Calculation failed. Check the inputs.');
     return { risk, imputed: x.filter(v => v === null).length, probabilities };
   }
   root.CKMEngine = { predict, validate };
