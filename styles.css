@@ -8,3 +8,12 @@
 .result-data>div>b{min-width:0}
 @media(max-width:760px){.panel-heading{align-items:flex-start;flex-wrap:wrap}.form-actions{gap:10px}.reset{padding:0 14px}.primary{font-size:13px;letter-spacing:0}.gauge-center{text-align:center}}
 @media print{.field>label:not(.missing){min-height:30px}}
+
+/* Identity and affiliation remain readable on narrow screens. */
+.brand{white-space:nowrap}
+.footer{flex-direction:column;gap:18px}
+.footer-author{display:flex;flex-direction:column;gap:4px;line-height:1.7}
+.footer-author strong{font-size:14px;font-weight:600;color:var(--ink)}
+.footer-author>span{font-size:12px;color:var(--muted)}
+.footer-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+@media(max-width:480px){.topbar-inner{height:auto;min-height:73px;padding-top:16px;padding-bottom:16px;gap:12px;flex-wrap:wrap}.footer-meta{flex-direction:column;gap:3px}}

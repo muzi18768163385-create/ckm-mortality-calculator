@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="A nine-predictor XGBoost research calculator for in-hospital mortality in adults with CKM. Prediction at 24 hours after ICU admission, entirely in your browser.">
+  <meta name="description" content="A nine-predictor XGBoost research calculator for in-hospital mortality in adults with CKM stage 4. Prediction at 24 hours after ICU admission, entirely in your browser.">
   <meta name="theme-color" content="#0d655b">
-  <title>CKM4 · In-hospital Mortality Risk Calculator</title>
+  <title>CKM stage 4 · In-hospital Mortality Risk Calculator</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261115-en1">
+  <link rel="stylesheet" href="styles.css?v=20261115-stage4">
   <script defer src="model-data.js"></script>
   <script defer src="engine.js?v=20261115-en1"></script>
   <script defer src="app.js?v=20261115-en1"></script>
@@ -15,14 +15,14 @@
 <body>
 <a class="skip" href="#calculator">Skip to calculator</a>
 <header class="topbar"><div class="shell topbar-inner">
-  <a class="brand" href="./" aria-label="CKM4 home"><span class="brand-icon" aria-hidden="true">✳</span><span>CKM4<span class="brand-sub">RISK CALCULATOR</span></span></a>
+  <a class="brand" href="./" aria-label="CKM stage 4 home"><span class="brand-icon" aria-hidden="true">✳</span><span>CKM stage 4<span class="brand-sub">RISK CALCULATOR</span></span></a>
   <div class="top-meta"><span class="tag">Research prototype</span><span id="model-status" class="status" role="status">Loading model</span></div>
 </div></header>
 <main class="shell">
   <section class="intro">
     <div class="eyebrow"><span></span> ICU · 24-HOUR LANDMARK</div>
     <h1>In-hospital mortality <span>risk calculator</span></h1>
-    <p class="lead">Use nine clinical predictors to estimate the probability of subsequent in-hospital death<br class="desktop-break"> at the 24-hour ICU landmark in adults meeting the study definition of CKM.</p>
+    <p class="lead">Use nine clinical predictors to estimate the probability of subsequent in-hospital death<br class="desktop-break"> at the 24-hour ICU landmark in adults meeting the study definition of CKM stage 4.</p>
     <div class="intro-facts"><span><b>09</b> predictors</span><span><b>20</b> locked models</span><span class="local-fact"><i aria-hidden="true">⌁</i> Computed locally · No input uploads</span></div>
   </section>
   <div class="workspace" id="calculator">
@@ -46,7 +46,7 @@
           <div class="field"><label for="SHR">Stress hyperglycemia ratio <span>SHR</span></label><div class="input-wrap"><input id="SHR" name="SHR" type="number" min="0" step="any" required placeholder="Enter value" inputmode="decimal" aria-describedby="shr-help"><span>unitless</span></div><p id="shr-help" class="help">Enter the calculated SHR, not a glucose value</p></div>
         </div></fieldset>
         <details class="formula"><summary>How is SHR calculated?</summary><p>SHR = admission glucose (mg/dL) ÷ [28.7 × HbA1c (%) − 46.7].</p><p>If glucose is measured in mmol/L, convert it to mg/dL using the study convention first. All measurements must be available by the prediction time.</p></details>
-        <label class="eligibility"><input id="eligible" type="checkbox" required><span>I confirm that this adult patient meets the study CKM eligibility criteria and was alive 24 hours after ICU admission.</span></label>
+        <label class="eligibility"><input id="eligible" type="checkbox" required><span>I confirm that this adult patient meets the study CKM stage 4 eligibility criteria and was alive 24 hours after ICU admission.</span></label>
         <div id="form-error" class="error" role="alert" hidden></div>
         <div class="form-actions"><button type="submit" id="calculate" class="primary" disabled>Calculate mortality risk <span aria-hidden="true">→</span></button><button type="reset" class="reset">Reset</button></div>
         <p id="example-note" class="example-note" role="status" hidden>Synthetic example loaded; these are not real patient data. Confirm eligibility before calculating.</p>
@@ -69,10 +69,13 @@
     </aside>
   </div>
   <section class="model-details card">
-    <details><summary><span><span class="eyebrow">MODEL NOTES</span><b>Model &amp; validation details</b></span><span class="expand-icon" aria-hidden="true">＋</span></summary><div class="details-body"><p>Model ID: <code>CKM-SHR-XGB9-20261113</code>. Risk is averaged across 20 locked XGBoost models, each with 100 trees. No training or parameter updates occur in the browser.</p><p>Explicit missingness is supported only for bicarbonate, respiratory rate, and mean arterial pressure. The frozen, outcome-free FCS-PMM training imputer uses 20 imputations, 10 iterations, and 5 candidate donors, with a fixed single-case seed of 20261113. Identical inputs produce identical results. Single-case imputation draws may differ from the original study’s batch predictions.</p><p>The source materials report an internal-test AUC of 0.7758 and an external AUC of 0.7937. Development data use minimum WBC, BUN, and bicarbonate values; external data use first-24-hour means. SHR aggregation also differs. These performance estimates come from the source study; numerical checks of this browser implementation do not constitute new clinical validation.</p><p>The reference synthetic case has a risk of 3.4412096% with complete inputs and 4.4328317% when only bicarbonate is missing. <a href="verification-report.json" target="_blank" rel="noopener">View numerical verification report ↗</a></p></div></details>
+    <details><summary><span><span class="eyebrow">MODEL NOTES</span><b>Model &amp; validation details</b></span><span class="expand-icon" aria-hidden="true">＋</span></summary><div class="details-body"><p>Model version: <code>20261113</code>. Risk is averaged across 20 locked XGBoost models, each with 100 trees. No training or parameter updates occur in the browser.</p><p>Explicit missingness is supported only for bicarbonate, respiratory rate, and mean arterial pressure. The frozen, outcome-free FCS-PMM training imputer uses 20 imputations, 10 iterations, and 5 candidate donors, with a fixed single-case seed of 20261113. Identical inputs produce identical results. Single-case imputation draws may differ from the original study’s batch predictions.</p><p>The source materials report an internal-test AUC of 0.7758 and an external AUC of 0.7937. Development data use minimum WBC, BUN, and bicarbonate values; external data use first-24-hour means. SHR aggregation also differs. These performance estimates come from the source study; numerical checks of this browser implementation do not constitute new clinical validation.</p><p>The reference synthetic case has a risk of 3.4412096% with complete inputs and 4.4328317% when only bicarbonate is missing. <a href="verification-report.json" target="_blank" rel="noopener">View numerical verification report ↗</a></p></div></details>
   </section>
   <noscript><p class="error">Enable JavaScript to load the model and calculate locally.</p></noscript>
 </main>
-<footer class="shell footer"><span>CKM · Nine-predictor in-hospital mortality model</span><span>For research use · CKM-SHR-XGB9-20261113</span></footer>
+<footer class="shell footer">
+  <div class="footer-author"><strong>Weili Li</strong><span>Department of Rehabilitation, Zhejiang Provincial People’s Hospital</span></div>
+  <div class="footer-meta"><span>CKM stage 4 · Nine-predictor in-hospital mortality model</span><span>For research use · Model version 20261113</span></div>
+</footer>
 </body>
 </html>
