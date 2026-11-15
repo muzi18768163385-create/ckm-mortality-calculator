@@ -1,0 +1,947 @@
+[
+  {
+    "id": "synthetic_missing_pattern_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0344120962545276
+  },
+  {
+    "id": "synthetic_missing_pattern_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0443283173255622
+  },
+  {
+    "id": "synthetic_missing_pattern_2",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0281165525317192
+  },
+  {
+    "id": "synthetic_missing_pattern_3",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0479399004951119
+  },
+  {
+    "id": "synthetic_missing_pattern_4",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.042263288423419
+  },
+  {
+    "id": "synthetic_missing_pattern_5",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0500104598701
+  },
+  {
+    "id": "synthetic_missing_pattern_6",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0348800378851593
+  },
+  {
+    "id": "synthetic_missing_pattern_7",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0475016451440752
+  },
+  {
+    "id": "synthetic_higher_values",
+    "input": {
+      "bicarbonate_mEq.L_min": 17,
+      "resp_rate_mean": 30,
+      "stroke": 1,
+      "wbc": 18,
+      "bun_mg.dL_min": 60,
+      "af": 1,
+      "mbp_mean": 65,
+      "age": 82,
+      "SHR": 2.2
+    },
+    "expected": 0.844525256752968
+  },
+  {
+    "id": "synthetic_lower_values",
+    "input": {
+      "bicarbonate_mEq.L_min": 27,
+      "resp_rate_mean": 16,
+      "stroke": 0,
+      "wbc": 7,
+      "bun_mg.dL_min": 15,
+      "af": 0,
+      "mbp_mean": 90,
+      "age": 45,
+      "SHR": 0.9
+    },
+    "expected": 0.014301096694544
+  },
+  {
+    "id": "varied_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 32.7397580468096,
+      "stroke": 1,
+      "wbc": 33.5211078063585,
+      "bun_mg.dL_min": 1.86729069333524,
+      "af": 0,
+      "mbp_mean": 98.8146034628153,
+      "age": 38.3476155954413,
+      "SHR": 1.84345498380717
+    },
+    "expected": 0.521559581160545
+  },
+  {
+    "id": "varied_2",
+    "input": {
+      "bicarbonate_mEq.L_min": 30.1919886665419,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 25.8796417256817,
+      "bun_mg.dL_min": 126.424501838628,
+      "af": 1,
+      "mbp_mean": 89.352940749377,
+      "age": 22.3355796835385,
+      "SHR": 1.76609259098768
+    },
+    "expected": 0.141561541333795
+  },
+  {
+    "id": "varied_3",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 4.30144184175879,
+      "bun_mg.dL_min": 81.4976807613857,
+      "af": 1,
+      "mbp_mean": 92.7770238555968,
+      "age": 48.3646307820454,
+      "SHR": 1.84471869778354
+    },
+    "expected": 0.295262934267521
+  },
+  {
+    "id": "varied_4",
+    "input": {
+      "bicarbonate_mEq.L_min": 14.7585023986176,
+      "resp_rate_mean": 10.1273645414039,
+      "stroke": 0,
+      "wbc": 15.9271297273226,
+      "bun_mg.dL_min": 97.4803625256754,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 33.3377853482962,
+      "SHR": 2.39501694005448
+    },
+    "expected": 0.115970895066857
+  },
+  {
+    "id": "varied_5",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 19.4047538633458,
+      "stroke": 1,
+      "wbc": 19.2705391691998,
+      "bun_mg.dL_min": 2.87749018752947,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 64.8759213765152,
+      "SHR": 2.46845602258109
+    },
+    "expected": 0.492279379069805
+  },
+  {
+    "id": "varied_6",
+    "input": {
+      "bicarbonate_mEq.L_min": 9.63930173404515,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 13.6296132132411,
+      "bun_mg.dL_min": 30.7720330473967,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 74.3010802650824,
+      "SHR": 2.34739075878169
+    },
+    "expected": 0.306886177882552
+  },
+  {
+    "id": "varied_7",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 13.5150408982299,
+      "bun_mg.dL_min": 101.861918037757,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 82.6616373807192,
+      "SHR": 2.99067903931718
+    },
+    "expected": 0.55770900696516
+  },
+  {
+    "id": "varied_8",
+    "input": {
+      "bicarbonate_mEq.L_min": 22.6002910491079,
+      "resp_rate_mean": 31.0665357206017,
+      "stroke": 0,
+      "wbc": 19.0503629208542,
+      "bun_mg.dL_min": 73.3520363923162,
+      "af": 0,
+      "mbp_mean": 48.7978454306722,
+      "age": 57.5833444404416,
+      "SHR": 1.78307682545856
+    },
+    "expected": 0.329427616298199
+  },
+  {
+    "id": "varied_9",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 28.577275685966,
+      "stroke": 1,
+      "wbc": 13.5413857949898,
+      "bun_mg.dL_min": 62.2000055969693,
+      "af": 0,
+      "mbp_mean": 118.352006562054,
+      "age": 88.8202501153573,
+      "SHR": 2.06458434916567
+    },
+    "expected": 0.447280816733837
+  },
+  {
+    "id": "varied_10",
+    "input": {
+      "bicarbonate_mEq.L_min": 34.71946201846,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 20.011143210344,
+      "bun_mg.dL_min": 61.9470143178478,
+      "af": 1,
+      "mbp_mean": 63.3592627383769,
+      "age": 31.9912881101482,
+      "SHR": 0.696494854521006
+    },
+    "expected": 0.293034663051367
+  },
+  {
+    "id": "varied_11",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 7.50444223918021,
+      "bun_mg.dL_min": 19.3402916076593,
+      "af": 1,
+      "mbp_mean": 83.4017270058393,
+      "age": 53.1201344220899,
+      "SHR": 0.953362651308998
+    },
+    "expected": 0.082360453531146
+  },
+  {
+    "id": "varied_12",
+    "input": {
+      "bicarbonate_mEq.L_min": 25.1413414552808,
+      "resp_rate_mean": 23.6058818548918,
+      "stroke": 0,
+      "wbc": 4.93013487383723,
+      "bun_mg.dL_min": 51.2421956448816,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 99.2726037912071,
+      "SHR": 2.37763353944756
+    },
+    "expected": 0.165551663190126
+  },
+  {
+    "id": "varied_13",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 17.6875465433113,
+      "stroke": 1,
+      "wbc": 21.3761554118246,
+      "bun_mg.dL_min": 26.4239025302231,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 69.7759699132293,
+      "SHR": 2.24250542193186
+    },
+    "expected": 0.425993430614471
+  },
+  {
+    "id": "varied_14",
+    "input": {
+      "bicarbonate_mEq.L_min": 34.6249985890463,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 34.1031670570374,
+      "bun_mg.dL_min": 24.2427986790426,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 24.5026882519014,
+      "SHR": 0.650039331126027
+    },
+    "expected": 0.121667771413922
+  },
+  {
+    "id": "varied_15",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 19.4584981258959,
+      "bun_mg.dL_min": 129.607996286359,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 68.4708146024495,
+      "SHR": 0.992725002556108
+    },
+    "expected": 0.484107986837626
+  },
+  {
+    "id": "varied_16",
+    "input": {
+      "bicarbonate_mEq.L_min": 24.5318997474387,
+      "resp_rate_mean": 30.9074434963986,
+      "stroke": 0,
+      "wbc": 7.13014869904146,
+      "bun_mg.dL_min": 27.8421228588559,
+      "af": 0,
+      "mbp_mean": 119.665522202849,
+      "age": 28.3188957599923,
+      "SHR": 2.28342415366787
+    },
+    "expected": 0.0730825025588274
+  },
+  {
+    "id": "varied_17",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 22.0259806700051,
+      "stroke": 1,
+      "wbc": 5.86857412755489,
+      "bun_mg.dL_min": 21.6212864033878,
+      "af": 0,
+      "mbp_mean": 104.380743205547,
+      "age": 41.0344076552428,
+      "SHR": 2.72949487776496
+    },
+    "expected": 0.220695179700851
+  },
+  {
+    "id": "varied_18",
+    "input": {
+      "bicarbonate_mEq.L_min": 25.3546812403947,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 31.2338756145909,
+      "bun_mg.dL_min": 115.284527416807,
+      "af": 1,
+      "mbp_mean": 114.496911410242,
+      "age": 43.2430625129491,
+      "SHR": 0.411897531640716
+    },
+    "expected": 0.142619547247887
+  },
+  {
+    "id": "varied_19",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 5.62057783827186,
+      "bun_mg.dL_min": 89.533578355331,
+      "af": 1,
+      "mbp_mean": 68.8999439030886,
+      "age": 35.278646690771,
+      "SHR": 1.22338621560484
+    },
+    "expected": 0.294512924179435
+  },
+  {
+    "id": "varied_20",
+    "input": {
+      "bicarbonate_mEq.L_min": 35.909531285055,
+      "resp_rate_mean": 21.9380721845664,
+      "stroke": 0,
+      "wbc": 15.0488169193268,
+      "bun_mg.dL_min": 77.0967234415002,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 33.0104564586654,
+      "SHR": 2.6416613337351
+    },
+    "expected": 0.11146366558969
+  },
+  {
+    "id": "varied_21",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 37.4847479001619,
+      "stroke": 1,
+      "wbc": 32.7829974368215,
+      "bun_mg.dL_min": 39.936137648765,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 19.2891168859787,
+      "SHR": 0.548293588240631
+    },
+    "expected": 0.449015541374683
+  },
+  {
+    "id": "varied_22",
+    "input": {
+      "bicarbonate_mEq.L_min": 27.5164181170985,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 4.99069496337324,
+      "bun_mg.dL_min": 102.299813099671,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 64.8291036402807,
+      "SHR": 2.25730312066153
+    },
+    "expected": 0.107286611199379
+  },
+  {
+    "id": "varied_23",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 34.2088547442108,
+      "bun_mg.dL_min": 76.5920668328181,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 40.289037081413,
+      "SHR": 1.94859798559919
+    },
+    "expected": 0.599867312610149
+  },
+  {
+    "id": "varied_24",
+    "input": {
+      "bicarbonate_mEq.L_min": 35.0484928432852,
+      "resp_rate_mean": 30.6256456580013,
+      "stroke": 0,
+      "wbc": 3.87740032607689,
+      "bun_mg.dL_min": 76.8477100413293,
+      "af": 0,
+      "mbp_mean": 122.753010150045,
+      "age": 34.3641959270462,
+      "SHR": 2.18820565359201
+    },
+    "expected": 0.127269588783383
+  },
+  {
+    "id": "varied_25",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 26.6695504868403,
+      "stroke": 1,
+      "wbc": 10.0856674420647,
+      "bun_mg.dL_min": 89.7679849714041,
+      "af": 0,
+      "mbp_mean": 50.5320580117404,
+      "age": 98.7572098392993,
+      "SHR": 2.58512885835953
+    },
+    "expected": 0.71078876554966
+  },
+  {
+    "id": "varied_26",
+    "input": {
+      "bicarbonate_mEq.L_min": 24.1752098230645,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 3.42358030704781,
+      "bun_mg.dL_min": 106.805601764936,
+      "af": 1,
+      "mbp_mean": 109.127205032855,
+      "age": 95.5225692596287,
+      "SHR": 0.729021581634879
+    },
+    "expected": 0.097174272313714
+  },
+  {
+    "id": "varied_27",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 3.86372077511624,
+      "bun_mg.dL_min": 37.0377170899883,
+      "af": 1,
+      "mbp_mean": 124.917362648994,
+      "age": 41.5339213605039,
+      "SHR": 0.701713314699009
+    },
+    "expected": 0.108800176903605
+  },
+  {
+    "id": "varied_28",
+    "input": {
+      "bicarbonate_mEq.L_min": 8.87766082212329,
+      "resp_rate_mean": 15.0043785758317,
+      "stroke": 0,
+      "wbc": 24.8280536951497,
+      "bun_mg.dL_min": 128.054837533273,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 57.0890550245531,
+      "SHR": 1.55733893425204
+    },
+    "expected": 0.160465908795595
+  },
+  {
+    "id": "varied_29",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 36.690926188603,
+      "stroke": 1,
+      "wbc": 13.9757565339096,
+      "bun_mg.dL_min": 34.5383080397733,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 81.1604849221185,
+      "SHR": 2.98836980131455
+    },
+    "expected": 0.578672155737877
+  },
+  {
+    "id": "varied_30",
+    "input": {
+      "bicarbonate_mEq.L_min": 27.568179063499,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 24.326544794254,
+      "bun_mg.dL_min": 68.3341352362186,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 69.9897274798714,
+      "SHR": 2.41952417045832
+    },
+    "expected": 0.255519109964371
+  },
+  {
+    "id": "varied_31",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 33.5660767150111,
+      "bun_mg.dL_min": 17.386645025108,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 36.3491574344225,
+      "SHR": 0.409144621482119
+    },
+    "expected": 0.201634741201997
+  },
+  {
+    "id": "varied_32",
+    "input": {
+      "bicarbonate_mEq.L_min": 25.2071884972975,
+      "resp_rate_mean": 25.6107205525041,
+      "stroke": 0,
+      "wbc": 19.6433682837524,
+      "bun_mg.dL_min": 97.3583466839045,
+      "af": 0,
+      "mbp_mean": 51.9752889312804,
+      "age": 41.9468158492818,
+      "SHR": 2.18498536013067
+    },
+    "expected": 0.336875918507576
+  },
+  {
+    "id": "boundary_1_-1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 18.499999,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0707397364079952
+  },
+  {
+    "id": "boundary_1_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 18.5,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0410945508629084
+  },
+  {
+    "id": "boundary_1_1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 18.500001,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0410945508629084
+  },
+  {
+    "id": "boundary_2_-1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 24.165904,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0470676878467202
+  },
+  {
+    "id": "boundary_2_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 24.165905,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0473076071590185
+  },
+  {
+    "id": "boundary_2_1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 24.165906,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0473076071590185
+  },
+  {
+    "id": "boundary_4_-1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 16.449999,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0456610832363367
+  },
+  {
+    "id": "boundary_4_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 16.45,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.046137529425323
+  },
+  {
+    "id": "boundary_4_1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 16.450001,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.046137529425323
+  },
+  {
+    "id": "boundary_5_-1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 22.499999,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0288478812202811
+  },
+  {
+    "id": "boundary_5_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 22.5,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0330780331045389
+  },
+  {
+    "id": "boundary_5_1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 22.500001,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0330780331045389
+  },
+  {
+    "id": "boundary_7_-1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 79.583329,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0350843266583979
+  },
+  {
+    "id": "boundary_7_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 79.58333,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0350843266583979
+  },
+  {
+    "id": "boundary_7_1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 79.583331,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0350843266583979
+  },
+  {
+    "id": "boundary_8_-1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 79.964369,
+      "SHR": 1.1
+    },
+    "expected": 0.0525884620845318
+  },
+  {
+    "id": "boundary_8_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 79.96437,
+      "SHR": 1.1
+    },
+    "expected": 0.0525884620845318
+  },
+  {
+    "id": "boundary_8_1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 79.964371,
+      "SHR": 1.1
+    },
+    "expected": 0.0525884620845318
+  },
+  {
+    "id": "boundary_9_-1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.3189818
+    },
+    "expected": 0.0361426962539554
+  },
+  {
+    "id": "boundary_9_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.3189828
+    },
+    "expected": 0.0372925778850913
+  },
+  {
+    "id": "boundary_9_1e-06",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.3189838
+    },
+    "expected": 0.0372925778850913
+  }
+]

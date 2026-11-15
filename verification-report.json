@@ -1,0 +1,390 @@
+{
+  "status": "passed",
+  "model": "CKM-SHR-XGB9-20261113",
+  "cases": 63,
+  "tolerance": 1e-7,
+  "max_absolute_error": 2.9802323942007547e-9,
+  "deterministic": true,
+  "invalid_inputs_rejected": true,
+  "outcome_ignored": true,
+  "results": [
+    {
+      "id": "synthetic_missing_pattern_0",
+      "expected": 0.0344120962545276,
+      "actual": 0.03441209625452757,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "synthetic_missing_pattern_1",
+      "expected": 0.0443283173255622,
+      "actual": 0.044328317325562236,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "synthetic_missing_pattern_2",
+      "expected": 0.0281165525317192,
+      "actual": 0.028116552531719206,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "synthetic_missing_pattern_3",
+      "expected": 0.0479399004951119,
+      "actual": 0.047939900495111945,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "synthetic_missing_pattern_4",
+      "expected": 0.042263288423419,
+      "actual": 0.042263288423419,
+      "absolute_error": 0
+    },
+    {
+      "id": "synthetic_missing_pattern_5",
+      "expected": 0.0500104598701,
+      "actual": 0.05001045987010002,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "synthetic_missing_pattern_6",
+      "expected": 0.0348800378851593,
+      "actual": 0.03488003807142377,
+      "absolute_error": 1.8626446912639594e-10
+    },
+    {
+      "id": "synthetic_missing_pattern_7",
+      "expected": 0.0475016451440752,
+      "actual": 0.04750164514407516,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "synthetic_higher_values",
+      "expected": 0.844525256752968,
+      "actual": 0.8445252567529679,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "id": "synthetic_lower_values",
+      "expected": 0.014301096694544,
+      "actual": 0.014301096694543958,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "varied_1",
+      "expected": 0.521559581160545,
+      "actual": 0.5215595811605453,
+      "absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "id": "varied_2",
+      "expected": 0.141561541333795,
+      "actual": 0.1415615413337946,
+      "absolute_error": 4.163336342344337e-16
+    },
+    {
+      "id": "varied_3",
+      "expected": 0.295262934267521,
+      "actual": 0.2952629342675209,
+      "absolute_error": 5.551115123125783e-17
+    },
+    {
+      "id": "varied_4",
+      "expected": 0.115970895066857,
+      "actual": 0.11597089506685734,
+      "absolute_error": 3.469446951953614e-16
+    },
+    {
+      "id": "varied_5",
+      "expected": 0.492279379069805,
+      "actual": 0.4922793790698051,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "id": "varied_6",
+      "expected": 0.306886177882552,
+      "actual": 0.3068861808627844,
+      "absolute_error": 2.9802323942007547e-9
+    },
+    {
+      "id": "varied_7",
+      "expected": 0.55770900696516,
+      "actual": 0.5577090069651603,
+      "absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "id": "varied_8",
+      "expected": 0.329427616298199,
+      "actual": 0.3294276148080826,
+      "absolute_error": 1.4901164191449823e-9
+    },
+    {
+      "id": "varied_9",
+      "expected": 0.447280816733837,
+      "actual": 0.4472808167338371,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "id": "varied_10",
+      "expected": 0.293034663051367,
+      "actual": 0.29303466305136683,
+      "absolute_error": 1.6653345369377348e-16
+    },
+    {
+      "id": "varied_11",
+      "expected": 0.082360453531146,
+      "actual": 0.08236045353114604,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "varied_12",
+      "expected": 0.165551663190126,
+      "actual": 0.16555166319012643,
+      "absolute_error": 4.163336342344337e-16
+    },
+    {
+      "id": "varied_13",
+      "expected": 0.425993430614471,
+      "actual": 0.4259934306144714,
+      "absolute_error": 4.440892098500626e-16
+    },
+    {
+      "id": "varied_14",
+      "expected": 0.121667771413922,
+      "actual": 0.12166777141392231,
+      "absolute_error": 3.0531133177191805e-16
+    },
+    {
+      "id": "varied_15",
+      "expected": 0.484107986837626,
+      "actual": 0.4841079868376255,
+      "absolute_error": 4.996003610813204e-16
+    },
+    {
+      "id": "varied_16",
+      "expected": 0.0730825025588274,
+      "actual": 0.0730825025588274,
+      "absolute_error": 0
+    },
+    {
+      "id": "varied_17",
+      "expected": 0.220695179700851,
+      "actual": 0.22069517970085145,
+      "absolute_error": 4.440892098500626e-16
+    },
+    {
+      "id": "varied_18",
+      "expected": 0.142619547247887,
+      "actual": 0.14261954724788667,
+      "absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "id": "varied_19",
+      "expected": 0.294512924179435,
+      "actual": 0.29451292417943475,
+      "absolute_error": 2.220446049250313e-16
+    },
+    {
+      "id": "varied_20",
+      "expected": 0.11146366558969,
+      "actual": 0.1114636655896902,
+      "absolute_error": 2.0816681711721685e-16
+    },
+    {
+      "id": "varied_21",
+      "expected": 0.449015541374683,
+      "actual": 0.44901554137468336,
+      "absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "id": "varied_22",
+      "expected": 0.107286611199379,
+      "actual": 0.10728661119937896,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "varied_23",
+      "expected": 0.599867312610149,
+      "actual": 0.5998673126101494,
+      "absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "id": "varied_24",
+      "expected": 0.127269588783383,
+      "actual": 0.12726958878338337,
+      "absolute_error": 3.885780586188048e-16
+    },
+    {
+      "id": "varied_25",
+      "expected": 0.71078876554966,
+      "actual": 0.7107887655496598,
+      "absolute_error": 2.220446049250313e-16
+    },
+    {
+      "id": "varied_26",
+      "expected": 0.097174272313714,
+      "actual": 0.09717427231371403,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "varied_27",
+      "expected": 0.108800176903605,
+      "actual": 0.10880017690360547,
+      "absolute_error": 4.718447854656915e-16
+    },
+    {
+      "id": "varied_28",
+      "expected": 0.160465908795595,
+      "actual": 0.16046590879559516,
+      "absolute_error": 1.6653345369377348e-16
+    },
+    {
+      "id": "varied_29",
+      "expected": 0.578672155737877,
+      "actual": 0.5786721557378769,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "id": "varied_30",
+      "expected": 0.255519109964371,
+      "actual": 0.2555191099643707,
+      "absolute_error": 2.7755575615628914e-16
+    },
+    {
+      "id": "varied_31",
+      "expected": 0.201634741201997,
+      "actual": 0.20163474120199681,
+      "absolute_error": 1.942890293094024e-16
+    },
+    {
+      "id": "varied_32",
+      "expected": 0.336875918507576,
+      "actual": 0.336875918507576,
+      "absolute_error": 0
+    },
+    {
+      "id": "boundary_1_-1e-06",
+      "expected": 0.0707397364079952,
+      "actual": 0.07073973640799522,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "boundary_1_0",
+      "expected": 0.0410945508629084,
+      "actual": 0.04109455086290836,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "boundary_1_1e-06",
+      "expected": 0.0410945508629084,
+      "actual": 0.04109455086290836,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "boundary_2_-1e-06",
+      "expected": 0.0470676878467202,
+      "actual": 0.04706768784672022,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "boundary_2_0",
+      "expected": 0.0473076071590185,
+      "actual": 0.047307607159018515,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "boundary_2_1e-06",
+      "expected": 0.0473076071590185,
+      "actual": 0.047307607159018515,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "boundary_4_-1e-06",
+      "expected": 0.0456610832363367,
+      "actual": 0.045661083236336705,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "boundary_4_0",
+      "expected": 0.046137529425323,
+      "actual": 0.04613752942532301,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "boundary_4_1e-06",
+      "expected": 0.046137529425323,
+      "actual": 0.04613752942532301,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "boundary_5_-1e-06",
+      "expected": 0.0288478812202811,
+      "actual": 0.028847881220281126,
+      "absolute_error": 2.42861286636753e-17
+    },
+    {
+      "id": "boundary_5_0",
+      "expected": 0.0330780331045389,
+      "actual": 0.03307803310453892,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "boundary_5_1e-06",
+      "expected": 0.0330780331045389,
+      "actual": 0.03307803310453892,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "boundary_7_-1e-06",
+      "expected": 0.0350843266583979,
+      "actual": 0.03508432665839791,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "boundary_7_0",
+      "expected": 0.0350843266583979,
+      "actual": 0.03508432665839791,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "boundary_7_1e-06",
+      "expected": 0.0350843266583979,
+      "actual": 0.03508432665839791,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "boundary_8_-1e-06",
+      "expected": 0.0525884620845318,
+      "actual": 0.05258846208453179,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "boundary_8_0",
+      "expected": 0.0525884620845318,
+      "actual": 0.05258846208453179,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "boundary_8_1e-06",
+      "expected": 0.0525884620845318,
+      "actual": 0.05258846208453179,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "boundary_9_-1e-06",
+      "expected": 0.0361426962539554,
+      "actual": 0.036142696253955366,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "boundary_9_0",
+      "expected": 0.0372925778850913,
+      "actual": 0.037292577885091306,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "boundary_9_1e-06",
+      "expected": 0.0372925778850913,
+      "actual": 0.037292577885091306,
+      "absolute_error": 6.938893903907228e-18
+    }
+  ]
+}
