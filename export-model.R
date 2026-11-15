@@ -5,7 +5,11 @@ source("../CKM_SHR_XGB9/app/predict_locked.R")
 path <- "../CKM_SHR_XGB9/app/private/locked_xgboost9.rds"
 stopifnot(unname(tools::md5sum(path)) == "b11f762732c4bd257915511652047f40")
 f <- readRDS(path)
-allowed <- c("bicarbonate_mEq.L_min", "resp_rate_mean", "mbp_mean")
+# Preserve the frozen FCS target order: it determines the RNG sequence.
+allowed <- f$imputer$targets
+stopifnot(identical(allowed, c("bicarbonate_mEq.L_min", "resp_rate_mean",
+                              "wbc", "bun_mg.dL_min", "mbp_mean", "age")))
+legacy_allowed <- c("bicarbonate_mEq.L_min", "resp_rate_mean", "mbp_mean")
 systems <- lapply(f$imputer$systems, function(s) lapply(allowed, function(v) {
   b <- s[[v]]
   # No prediction ties: the random shuffle affects RNG advancement only.
@@ -17,7 +21,7 @@ systems <- lapply(f$imputer$systems, function(s) lapply(allowed, function(v) {
 # Every call is a single case with the original fixed seed. R's random draws
 # depend on missingness pattern, never on input values. Export the exact ranks
 # after advancing base::sample(n), as mice 3.18.0 matchindex does.
-draws <- lapply(0:7, function(mask) {
+draws <- lapply(0:(2^length(allowed)-1), function(mask) {
   set.seed(20261113L)
   h <- integer()
   for(i in seq_len(20)) for(it in seq_len(10)) for(j in seq_along(allowed)) {
@@ -55,7 +59,7 @@ for(i in 1:32) {
       stroke=as.numeric(i%%2),wbc=runif(1,1,35),bun_mg.dL_min=runif(1,0,130),
       af=as.numeric((i%/%2)%%2),mbp_mean=runif(1,45,125),age=runif(1,18,100),SHR=runif(1,.3,3),check.names=FALSE)
   mask <- i%%8
-  for(j in seq_along(allowed))if(bitwAnd(mask,bitwShiftL(1L,j-1L))!=0)x[[allowed[j]]] <- NA_real_
+  for(j in seq_along(legacy_allowed))if(bitwAnd(mask,bitwShiftL(1L,j-1L))!=0)x[[legacy_allowed[j]]] <- NA_real_
   expected <- predict_locked(x,f,calculator=TRUE)$predicted_risk
   checks[[length(checks)+1L]] <- list(id=paste0("varied_",i),input=as.list(x),expected=expected)
 }
@@ -71,6 +75,27 @@ for(j in seq_along(f$variables)) {
     checks[[length(checks)+1L]] <- list(id=paste0("boundary_",j,"_",delta),input=as.list(x),
                                       expected=predict_locked(x,f,calculator=TRUE)$predicted_risk)
   }
+}
+# Exercise all 64 combinations twice, including WBC/BUN/age and all six missing.
+# calculator=FALSE invokes the original locked predictor's full imputation
+# support; the original Shiny form's narrower missingness restriction is not used.
+for(mask in 0:(2^length(allowed)-1)) for(variant in 0:1) {
+  x <- cases[1,f$variables]
+  if(variant == 1) {
+    x$bicarbonate_mEq.L_min <- 12 + mask/3
+    x$resp_rate_mean <- 12 + mask/4
+    x$wbc <- 3 + mask/3
+    x$bun_mg.dL_min <- 5 + mask
+    x$mbp_mean <- 55 + mask/2
+    x$age <- 40 + mask%%45
+    x$SHR <- .5 + mask/30
+    x$stroke <- as.numeric(mask%%2)
+    x$af <- as.numeric((mask%/%2)%%2)
+  }
+  for(j in seq_along(allowed)) if(bitwAnd(mask,bitwShiftL(1L,j-1L))!=0)
+    x[[allowed[j]]] <- NA_real_
+  checks[[length(checks)+1L]] <- list(id=paste0("expanded_missing_",mask,"_",variant),
+    input=as.list(x),expected=predict_locked(x,f,calculator=FALSE)$predicted_risk)
 }
 write_json(checks,"reference-cases.json",auto_unbox=TRUE,digits=NA,na="null",pretty=TRUE)
 cat("Exported",length(models),"models and",length(checks),"reference cases.\n")

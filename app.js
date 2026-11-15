@@ -81,6 +81,7 @@
   });
   $('print').addEventListener('click',() => {if(calculated) window.print();});
   try {
+    if (globalThis.CKM_MODEL.missing_indices.join(',') !== '0,1,3,4,6,7') throw new Error('Model imputation support does not match this calculator version.');
     const reference = Object.fromEntries(globalThis.CKM_MODEL.variables.map((k,i) => [k,[23,21,0,10,25,0,80,67,1.1][i]]));
     if (Math.abs(globalThis.CKMEngine.predict(reference).risk-.034412096254527569)>1e-7) throw new Error('Model verification failed');
     reference['bicarbonate_mEq.L_min'] = null;

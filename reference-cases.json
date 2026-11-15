@@ -943,5 +943,1925 @@
       "SHR": 1.3189838
     },
     "expected": 0.0372925778850913
+  },
+  {
+    "id": "expanded_missing_0_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0344120962545276
+  },
+  {
+    "id": "expanded_missing_0_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 12,
+      "resp_rate_mean": 12,
+      "stroke": 0,
+      "wbc": 3,
+      "bun_mg.dL_min": 5,
+      "af": 0,
+      "mbp_mean": 55,
+      "age": 40,
+      "SHR": 0.5
+    },
+    "expected": 0.0698250954970717
+  },
+  {
+    "id": "expanded_missing_1_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0443283173255622
+  },
+  {
+    "id": "expanded_missing_1_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 12.25,
+      "stroke": 1,
+      "wbc": 3.33333333333333,
+      "bun_mg.dL_min": 6,
+      "af": 0,
+      "mbp_mean": 55.5,
+      "age": 41,
+      "SHR": 0.533333333333333
+    },
+    "expected": 0.0453946834430099
+  },
+  {
+    "id": "expanded_missing_2_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0281165525317192
+  },
+  {
+    "id": "expanded_missing_2_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 12.6666666666667,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 3.66666666666667,
+      "bun_mg.dL_min": 7,
+      "af": 1,
+      "mbp_mean": 56,
+      "age": 42,
+      "SHR": 0.566666666666667
+    },
+    "expected": 0.179822327196598
+  },
+  {
+    "id": "expanded_missing_3_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0479399004951119
+  },
+  {
+    "id": "expanded_missing_3_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 4,
+      "bun_mg.dL_min": 8,
+      "af": 1,
+      "mbp_mean": 56.5,
+      "age": 43,
+      "SHR": 0.6
+    },
+    "expected": 0.109488013759255
+  },
+  {
+    "id": "expanded_missing_4_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0359598187729716
+  },
+  {
+    "id": "expanded_missing_4_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 13.3333333333333,
+      "resp_rate_mean": 13,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 9,
+      "af": 0,
+      "mbp_mean": 57,
+      "age": 44,
+      "SHR": 0.633333333333333
+    },
+    "expected": 0.0698817765340209
+  },
+  {
+    "id": "expanded_missing_5_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0575755977071822
+  },
+  {
+    "id": "expanded_missing_5_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 13.25,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": 10,
+      "af": 0,
+      "mbp_mean": 57.5,
+      "age": 45,
+      "SHR": 0.666666666666667
+    },
+    "expected": 0.0569031924009323
+  },
+  {
+    "id": "expanded_missing_6_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0292443906888366
+  },
+  {
+    "id": "expanded_missing_6_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 14,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 11,
+      "af": 1,
+      "mbp_mean": 58,
+      "age": 46,
+      "SHR": 0.7
+    },
+    "expected": 0.276716713234782
+  },
+  {
+    "id": "expanded_missing_7_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0397483585402369
+  },
+  {
+    "id": "expanded_missing_7_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": 12,
+      "af": 1,
+      "mbp_mean": 58.5,
+      "age": 47,
+      "SHR": 0.733333333333333
+    },
+    "expected": 0.0991104377433658
+  },
+  {
+    "id": "expanded_missing_8_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0300945951603353
+  },
+  {
+    "id": "expanded_missing_8_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 14.6666666666667,
+      "resp_rate_mean": 14,
+      "stroke": 0,
+      "wbc": 5.66666666666667,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 59,
+      "age": 48,
+      "SHR": 0.766666666666667
+    },
+    "expected": 0.0836559737101197
+  },
+  {
+    "id": "expanded_missing_9_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0376485194079578
+  },
+  {
+    "id": "expanded_missing_9_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 14.25,
+      "stroke": 1,
+      "wbc": 6,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 59.5,
+      "age": 49,
+      "SHR": 0.8
+    },
+    "expected": 0.0515361536294222
+  },
+  {
+    "id": "expanded_missing_10_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.028969787247479
+  },
+  {
+    "id": "expanded_missing_10_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 15.3333333333333,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 6.33333333333333,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": 60,
+      "age": 50,
+      "SHR": 0.833333333333333
+    },
+    "expected": 0.225218186527491
+  },
+  {
+    "id": "expanded_missing_11_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0418987799435854
+  },
+  {
+    "id": "expanded_missing_11_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 6.66666666666667,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": 60.5,
+      "age": 51,
+      "SHR": 0.866666666666667
+    },
+    "expected": 0.0978716890327632
+  },
+  {
+    "id": "expanded_missing_12_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0349091141484678
+  },
+  {
+    "id": "expanded_missing_12_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 16,
+      "resp_rate_mean": 15,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 61,
+      "age": 52,
+      "SHR": 0.9
+    },
+    "expected": 0.0739814471453428
+  },
+  {
+    "id": "expanded_missing_13_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0403356408700347
+  },
+  {
+    "id": "expanded_missing_13_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 15.25,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 61.5,
+      "age": 53,
+      "SHR": 0.933333333333333
+    },
+    "expected": 0.0718910852447152
+  },
+  {
+    "id": "expanded_missing_14_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0281986713409424
+  },
+  {
+    "id": "expanded_missing_14_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 16.6666666666667,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": 62,
+      "age": 54,
+      "SHR": 0.966666666666667
+    },
+    "expected": 0.200287101976573
+  },
+  {
+    "id": "expanded_missing_15_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0389387027360499
+  },
+  {
+    "id": "expanded_missing_15_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": 62.5,
+      "age": 55,
+      "SHR": 1
+    },
+    "expected": 0.193178983591497
+  },
+  {
+    "id": "expanded_missing_16_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.042263288423419
+  },
+  {
+    "id": "expanded_missing_16_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 17.3333333333333,
+      "resp_rate_mean": 16,
+      "stroke": 0,
+      "wbc": 8.33333333333333,
+      "bun_mg.dL_min": 21,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 56,
+      "SHR": 1.03333333333333
+    },
+    "expected": 0.0462416825816035
+  },
+  {
+    "id": "expanded_missing_17_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0500104598701
+  },
+  {
+    "id": "expanded_missing_17_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 16.25,
+      "stroke": 1,
+      "wbc": 8.66666666666667,
+      "bun_mg.dL_min": 22,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 57,
+      "SHR": 1.06666666666667
+    },
+    "expected": 0.0458808451890945
+  },
+  {
+    "id": "expanded_missing_18_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0348800378851593
+  },
+  {
+    "id": "expanded_missing_18_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 18,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 9,
+      "bun_mg.dL_min": 23,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 58,
+      "SHR": 1.1
+    },
+    "expected": 0.102132572606206
+  },
+  {
+    "id": "expanded_missing_19_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0475016451440752
+  },
+  {
+    "id": "expanded_missing_19_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 9.33333333333333,
+      "bun_mg.dL_min": 24,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 59,
+      "SHR": 1.13333333333333
+    },
+    "expected": 0.113595385476947
+  },
+  {
+    "id": "expanded_missing_20_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0426763758063316
+  },
+  {
+    "id": "expanded_missing_20_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 18.6666666666667,
+      "resp_rate_mean": 17,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 60,
+      "SHR": 1.16666666666667
+    },
+    "expected": 0.0396011360920966
+  },
+  {
+    "id": "expanded_missing_21_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.052272688690573
+  },
+  {
+    "id": "expanded_missing_21_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 17.25,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": 26,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 61,
+      "SHR": 1.2
+    },
+    "expected": 0.088302643597126
+  },
+  {
+    "id": "expanded_missing_22_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.033252514153719
+  },
+  {
+    "id": "expanded_missing_22_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 19.3333333333333,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 27,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 62,
+      "SHR": 1.23333333333333
+    },
+    "expected": 0.0751178078353405
+  },
+  {
+    "id": "expanded_missing_23_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0497883413918316
+  },
+  {
+    "id": "expanded_missing_23_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": 28,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 63,
+      "SHR": 1.26666666666667
+    },
+    "expected": 0.176654877513647
+  },
+  {
+    "id": "expanded_missing_24_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0376623753458262
+  },
+  {
+    "id": "expanded_missing_24_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 20,
+      "resp_rate_mean": 18,
+      "stroke": 0,
+      "wbc": 11,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 64,
+      "SHR": 1.3
+    },
+    "expected": 0.0280953912995756
+  },
+  {
+    "id": "expanded_missing_25_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0422414635308087
+  },
+  {
+    "id": "expanded_missing_25_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 18.25,
+      "stroke": 1,
+      "wbc": 11.3333333333333,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 65,
+      "SHR": 1.33333333333333
+    },
+    "expected": 0.098082927800715
+  },
+  {
+    "id": "expanded_missing_26_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0301534418016672
+  },
+  {
+    "id": "expanded_missing_26_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 20.6666666666667,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 11.6666666666667,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 66,
+      "SHR": 1.36666666666667
+    },
+    "expected": 0.0705919930711389
+  },
+  {
+    "id": "expanded_missing_27_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0378924717195332
+  },
+  {
+    "id": "expanded_missing_27_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 12,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.4
+    },
+    "expected": 0.137020906805992
+  },
+  {
+    "id": "expanded_missing_28_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0440697791986167
+  },
+  {
+    "id": "expanded_missing_28_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 21.3333333333333,
+      "resp_rate_mean": 19,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 68,
+      "SHR": 1.43333333333333
+    },
+    "expected": 0.0383308255113661
+  },
+  {
+    "id": "expanded_missing_29_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0321144920773804
+  },
+  {
+    "id": "expanded_missing_29_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 19.25,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 69,
+      "SHR": 1.46666666666667
+    },
+    "expected": 0.144024773314595
+  },
+  {
+    "id": "expanded_missing_30_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0295029670000076
+  },
+  {
+    "id": "expanded_missing_30_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 22,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 70,
+      "SHR": 1.5
+    },
+    "expected": 0.0737787384539843
+  },
+  {
+    "id": "expanded_missing_31_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": 67,
+      "SHR": 1.1
+    },
+    "expected": 0.0564830007962882
+  },
+  {
+    "id": "expanded_missing_31_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": null,
+      "age": 71,
+      "SHR": 1.53333333333333
+    },
+    "expected": 0.18009154163301
+  },
+  {
+    "id": "expanded_missing_32_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0400530662387609
+  },
+  {
+    "id": "expanded_missing_32_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 22.6666666666667,
+      "resp_rate_mean": 20,
+      "stroke": 0,
+      "wbc": 13.6666666666667,
+      "bun_mg.dL_min": 37,
+      "af": 0,
+      "mbp_mean": 71,
+      "age": null,
+      "SHR": 1.56666666666667
+    },
+    "expected": 0.114546038582921
+  },
+  {
+    "id": "expanded_missing_33_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0560794403776526
+  },
+  {
+    "id": "expanded_missing_33_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 20.25,
+      "stroke": 1,
+      "wbc": 14,
+      "bun_mg.dL_min": 38,
+      "af": 0,
+      "mbp_mean": 71.5,
+      "age": null,
+      "SHR": 1.6
+    },
+    "expected": 0.463425353169441
+  },
+  {
+    "id": "expanded_missing_34_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0331610814668238
+  },
+  {
+    "id": "expanded_missing_34_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 23.3333333333333,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 14.3333333333333,
+      "bun_mg.dL_min": 39,
+      "af": 1,
+      "mbp_mean": 72,
+      "age": null,
+      "SHR": 1.63333333333333
+    },
+    "expected": 0.161955327913165
+  },
+  {
+    "id": "expanded_missing_35_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0422600467689335
+  },
+  {
+    "id": "expanded_missing_35_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 14.6666666666667,
+      "bun_mg.dL_min": 40,
+      "af": 1,
+      "mbp_mean": 72.5,
+      "age": null,
+      "SHR": 1.66666666666667
+    },
+    "expected": 0.548324970155954
+  },
+  {
+    "id": "expanded_missing_36_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0388911625370383
+  },
+  {
+    "id": "expanded_missing_36_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 24,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 41,
+      "af": 0,
+      "mbp_mean": 73,
+      "age": null,
+      "SHR": 1.7
+    },
+    "expected": 0.0969637300819159
+  },
+  {
+    "id": "expanded_missing_37_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0561396146193147
+  },
+  {
+    "id": "expanded_missing_37_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21.25,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": 42,
+      "af": 0,
+      "mbp_mean": 73.5,
+      "age": null,
+      "SHR": 1.73333333333333
+    },
+    "expected": 0.475377217680216
+  },
+  {
+    "id": "expanded_missing_38_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0325632187537849
+  },
+  {
+    "id": "expanded_missing_38_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 24.6666666666667,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 43,
+      "af": 1,
+      "mbp_mean": 74,
+      "age": null,
+      "SHR": 1.76666666666667
+    },
+    "expected": 0.150504841841757
+  },
+  {
+    "id": "expanded_missing_39_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0478072084486485
+  },
+  {
+    "id": "expanded_missing_39_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": 44,
+      "af": 1,
+      "mbp_mean": 74.5,
+      "age": null,
+      "SHR": 1.8
+    },
+    "expected": 0.480855342745781
+  },
+  {
+    "id": "expanded_missing_40_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0334341797046363
+  },
+  {
+    "id": "expanded_missing_40_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 25.3333333333333,
+      "resp_rate_mean": 22,
+      "stroke": 0,
+      "wbc": 16.3333333333333,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 75,
+      "age": null,
+      "SHR": 1.83333333333333
+    },
+    "expected": 0.0917972397059202
+  },
+  {
+    "id": "expanded_missing_41_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0349683474749327
+  },
+  {
+    "id": "expanded_missing_41_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 22.25,
+      "stroke": 1,
+      "wbc": 16.6666666666667,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 75.5,
+      "age": null,
+      "SHR": 1.86666666666667
+    },
+    "expected": 0.549774362146854
+  },
+  {
+    "id": "expanded_missing_42_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0400054682046175
+  },
+  {
+    "id": "expanded_missing_42_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 26,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 17,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": 76,
+      "age": null,
+      "SHR": 1.9
+    },
+    "expected": 0.118759830482304
+  },
+  {
+    "id": "expanded_missing_43_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0467647354118526
+  },
+  {
+    "id": "expanded_missing_43_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 17.3333333333333,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": 76.5,
+      "age": null,
+      "SHR": 1.93333333333333
+    },
+    "expected": 0.558915156126022
+  },
+  {
+    "id": "expanded_missing_44_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0423344599083066
+  },
+  {
+    "id": "expanded_missing_44_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 26.6666666666667,
+      "resp_rate_mean": 23,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 77,
+      "age": null,
+      "SHR": 1.96666666666667
+    },
+    "expected": 0.0820570750162005
+  },
+  {
+    "id": "expanded_missing_45_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0490476376377046
+  },
+  {
+    "id": "expanded_missing_45_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 23.25,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 77.5,
+      "age": null,
+      "SHR": 2
+    },
+    "expected": 0.44726337864995
+  },
+  {
+    "id": "expanded_missing_46_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0347581437788904
+  },
+  {
+    "id": "expanded_missing_46_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 27.3333333333333,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": 78,
+      "age": null,
+      "SHR": 2.03333333333333
+    },
+    "expected": 0.083783040381968
+  },
+  {
+    "id": "expanded_missing_47_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": 80,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0375002270564437
+  },
+  {
+    "id": "expanded_missing_47_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": 78.5,
+      "age": null,
+      "SHR": 2.06666666666667
+    },
+    "expected": 0.433578328043222
+  },
+  {
+    "id": "expanded_missing_48_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0506179080344737
+  },
+  {
+    "id": "expanded_missing_48_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 28,
+      "resp_rate_mean": 24,
+      "stroke": 0,
+      "wbc": 19,
+      "bun_mg.dL_min": 53,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.1
+    },
+    "expected": 0.168248545378447
+  },
+  {
+    "id": "expanded_missing_49_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0538592074997723
+  },
+  {
+    "id": "expanded_missing_49_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 24.25,
+      "stroke": 1,
+      "wbc": 19.3333333333333,
+      "bun_mg.dL_min": 54,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.13333333333333
+    },
+    "expected": 0.662471437454224
+  },
+  {
+    "id": "expanded_missing_50_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0422557568177581
+  },
+  {
+    "id": "expanded_missing_50_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 28.6666666666667,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 19.6666666666667,
+      "bun_mg.dL_min": 55,
+      "af": 1,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.16666666666667
+    },
+    "expected": 0.209681878238916
+  },
+  {
+    "id": "expanded_missing_51_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0494975190609694
+  },
+  {
+    "id": "expanded_missing_51_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 20,
+      "bun_mg.dL_min": 56,
+      "af": 1,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.2
+    },
+    "expected": 0.570960253477097
+  },
+  {
+    "id": "expanded_missing_52_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.049498781748116
+  },
+  {
+    "id": "expanded_missing_52_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 29.3333333333333,
+      "resp_rate_mean": 25,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 57,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.23333333333333
+    },
+    "expected": 0.172557935491204
+  },
+  {
+    "id": "expanded_missing_53_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.064731995202601
+  },
+  {
+    "id": "expanded_missing_53_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 25.25,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": 58,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.26666666666667
+    },
+    "expected": 0.493442049622536
+  },
+  {
+    "id": "expanded_missing_54_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0393228340893984
+  },
+  {
+    "id": "expanded_missing_54_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 30,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 59,
+      "af": 1,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.3
+    },
+    "expected": 0.150508428737521
+  },
+  {
+    "id": "expanded_missing_55_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": 25,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0525600909255445
+  },
+  {
+    "id": "expanded_missing_55_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": 60,
+      "af": 1,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.33333333333333
+    },
+    "expected": 0.452745521068573
+  },
+  {
+    "id": "expanded_missing_56_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0437874768860638
+  },
+  {
+    "id": "expanded_missing_56_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 30.6666666666667,
+      "resp_rate_mean": 26,
+      "stroke": 0,
+      "wbc": 21.6666666666667,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.36666666666667
+    },
+    "expected": 0.240448571741581
+  },
+  {
+    "id": "expanded_missing_57_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0727174097672105
+  },
+  {
+    "id": "expanded_missing_57_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 26.25,
+      "stroke": 1,
+      "wbc": 22,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.4
+    },
+    "expected": 0.650392200052738
+  },
+  {
+    "id": "expanded_missing_58_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0417488631792367
+  },
+  {
+    "id": "expanded_missing_58_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 31.3333333333333,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 22.3333333333333,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.43333333333333
+    },
+    "expected": 0.212462317198515
+  },
+  {
+    "id": "expanded_missing_59_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": 10,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.037765983864665
+  },
+  {
+    "id": "expanded_missing_59_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": 22.6666666666667,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.46666666666667
+    },
+    "expected": 0.551191291213036
+  },
+  {
+    "id": "expanded_missing_60_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0404308433644474
+  },
+  {
+    "id": "expanded_missing_60_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 32,
+      "resp_rate_mean": 27,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.5
+    },
+    "expected": 0.137399534136057
+  },
+  {
+    "id": "expanded_missing_61_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 21,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.061186869814992
+  },
+  {
+    "id": "expanded_missing_61_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": 27.25,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.53333333333333
+    },
+    "expected": 0.463111171871424
+  },
+  {
+    "id": "expanded_missing_62_0",
+    "input": {
+      "bicarbonate_mEq.L_min": 23,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0361213635653257
+  },
+  {
+    "id": "expanded_missing_62_1",
+    "input": {
+      "bicarbonate_mEq.L_min": 32.6666666666667,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.56666666666667
+    },
+    "expected": 0.107381023094058
+  },
+  {
+    "id": "expanded_missing_63_0",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 0,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 0,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 1.1
+    },
+    "expected": 0.0504133751615882
+  },
+  {
+    "id": "expanded_missing_63_1",
+    "input": {
+      "bicarbonate_mEq.L_min": null,
+      "resp_rate_mean": null,
+      "stroke": 1,
+      "wbc": null,
+      "bun_mg.dL_min": null,
+      "af": 1,
+      "mbp_mean": null,
+      "age": null,
+      "SHR": 2.6
+    },
+    "expected": 0.360085823386908
   }
 ]

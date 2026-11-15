@@ -6,6 +6,7 @@
     return model.variables.map((key, i) => {
       const v = input[key];
       if (v === null && model.missing_indices.includes(i)) return null;
+      if (i === 8 && (v === null || v === undefined)) throw new Error('SHR is required. The locked model has no SHR imputer; enter the calculated SHR.');
       if (typeof v !== 'number' || !Number.isFinite(v)) throw new Error(`Enter a valid value for ${labels[i]}.`);
       if ((i === 2 || i === 5) && v !== 0 && v !== 1) throw new Error('Select Yes or No for stroke and atrial fibrillation. Unknown status must not be entered as No.');
       if (i === 7 && (v < 18 || v > 120)) throw new Error('Age must be between 18 and 120 years.');
