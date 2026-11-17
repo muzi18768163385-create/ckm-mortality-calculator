@@ -57,6 +57,14 @@
     if (!Number.isFinite(risk) || risk < 0 || risk > 1) throw new Error('Calculation failed. Check the inputs.');
     return { risk, imputed: x.filter(v => v === null).length, probabilities };
   }
-  root.CKMEngine = { predict, validate };
+  // Explicit fixed-value scenario; missing-SHR performance is not validated.
+  function predictWithShrMedian(input, trainingMedian, model = root.CKM_MODEL) {
+    if (!model) throw new Error('The model has not loaded. Refresh the page.');
+    if (input.SHR !== null) throw new Error('SHR must be explicitly unavailable to use the training median.');
+    if (typeof trainingMedian !== 'number' || !Number.isFinite(trainingMedian) || trainingMedian <= 0) throw new Error('A verified training-set SHR median is required.');
+    const result = predict({...input, SHR: trainingMedian}, model);
+    return {...result, mode: 'shr_training_median_scenario', shrMedian: trainingMedian, clinicallyValidated: false};
+  }
+  root.CKMEngine = { predict, predictWithShrMedian, validate };
   if (typeof module !== 'undefined') module.exports = root.CKMEngine;
 })(globalThis);

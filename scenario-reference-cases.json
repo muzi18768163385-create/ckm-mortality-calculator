@@ -1,0 +1,1956 @@
+{
+  "method": "Original R predictor with SHR explicitly set to the training median; numerical agreement only, not clinical validation.",
+  "shr_training_median": 1.088619,
+  "cases": [
+    {
+      "id": "shr_median_synthetic_higher_values",
+      "input": {
+        "bicarbonate_mEq.L_min": 17,
+        "resp_rate_mean": 30,
+        "stroke": 1,
+        "wbc": 18,
+        "bun_mg.dL_min": 60,
+        "af": 1,
+        "mbp_mean": 65,
+        "age": 82,
+        "SHR": null
+      },
+      "expected": 0.815309128165245
+    },
+    {
+      "id": "shr_median_synthetic_lower_values",
+      "input": {
+        "bicarbonate_mEq.L_min": 27,
+        "resp_rate_mean": 16,
+        "stroke": 0,
+        "wbc": 7,
+        "bun_mg.dL_min": 15,
+        "af": 0,
+        "mbp_mean": 90,
+        "age": 45,
+        "SHR": null
+      },
+      "expected": 0.0157476151827723
+    },
+    {
+      "id": "shr_median_expanded_missing_0_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.034056943655014
+    },
+    {
+      "id": "shr_median_expanded_missing_0_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 12,
+        "resp_rate_mean": 12,
+        "stroke": 0,
+        "wbc": 3,
+        "bun_mg.dL_min": 5,
+        "af": 0,
+        "mbp_mean": 55,
+        "age": 40,
+        "SHR": null
+      },
+      "expected": 0.0722703669220209
+    },
+    {
+      "id": "shr_median_expanded_missing_1_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0590877868235111
+    },
+    {
+      "id": "shr_median_expanded_missing_1_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 12.25,
+        "stroke": 1,
+        "wbc": 3.33333333333333,
+        "bun_mg.dL_min": 6,
+        "af": 0,
+        "mbp_mean": 55.5,
+        "age": 41,
+        "SHR": null
+      },
+      "expected": 0.0665691995993257
+    },
+    {
+      "id": "shr_median_expanded_missing_2_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0278064992278814
+    },
+    {
+      "id": "shr_median_expanded_missing_2_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 12.6666666666667,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 3.66666666666667,
+        "bun_mg.dL_min": 7,
+        "af": 1,
+        "mbp_mean": 56,
+        "age": 42,
+        "SHR": null
+      },
+      "expected": 0.193289562314749
+    },
+    {
+      "id": "shr_median_expanded_missing_3_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0314896548166871
+    },
+    {
+      "id": "shr_median_expanded_missing_3_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": 4,
+        "bun_mg.dL_min": 8,
+        "af": 1,
+        "mbp_mean": 56.5,
+        "age": 43,
+        "SHR": null
+      },
+      "expected": 0.0939020192250609
+    },
+    {
+      "id": "shr_median_expanded_missing_4_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0362699132412672
+    },
+    {
+      "id": "shr_median_expanded_missing_4_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 13.3333333333333,
+        "resp_rate_mean": 13,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 9,
+        "af": 0,
+        "mbp_mean": 57,
+        "age": 44,
+        "SHR": null
+      },
+      "expected": 0.0753489293158054
+    },
+    {
+      "id": "shr_median_expanded_missing_5_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0487766260281205
+    },
+    {
+      "id": "shr_median_expanded_missing_5_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 13.25,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": 10,
+        "af": 0,
+        "mbp_mean": 57.5,
+        "age": 45,
+        "SHR": null
+      },
+      "expected": 0.0652821337804198
+    },
+    {
+      "id": "shr_median_expanded_missing_6_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0312571703456342
+    },
+    {
+      "id": "shr_median_expanded_missing_6_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 14,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 11,
+        "af": 1,
+        "mbp_mean": 58,
+        "age": 46,
+        "SHR": null
+      },
+      "expected": 0.190487635880709
+    },
+    {
+      "id": "shr_median_expanded_missing_7_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0324274356476963
+    },
+    {
+      "id": "shr_median_expanded_missing_7_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": 12,
+        "af": 1,
+        "mbp_mean": 58.5,
+        "age": 47,
+        "SHR": null
+      },
+      "expected": 0.140332735143602
+    },
+    {
+      "id": "shr_median_expanded_missing_8_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0303108313120902
+    },
+    {
+      "id": "shr_median_expanded_missing_8_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 14.6666666666667,
+        "resp_rate_mean": 14,
+        "stroke": 0,
+        "wbc": 5.66666666666667,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 59,
+        "age": 48,
+        "SHR": null
+      },
+      "expected": 0.0823245024308562
+    },
+    {
+      "id": "shr_median_expanded_missing_9_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0394487082958221
+    },
+    {
+      "id": "shr_median_expanded_missing_9_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 14.25,
+        "stroke": 1,
+        "wbc": 6,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 59.5,
+        "age": 49,
+        "SHR": null
+      },
+      "expected": 0.0664125524461269
+    },
+    {
+      "id": "shr_median_expanded_missing_10_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0280942383222282
+    },
+    {
+      "id": "shr_median_expanded_missing_10_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 15.3333333333333,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 6.33333333333333,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": 60,
+        "age": 50,
+        "SHR": null
+      },
+      "expected": 0.212947559729218
+    },
+    {
+      "id": "shr_median_expanded_missing_11_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0321691110730171
+    },
+    {
+      "id": "shr_median_expanded_missing_11_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": 6.66666666666667,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": 60.5,
+        "age": 51,
+        "SHR": null
+      },
+      "expected": 0.114877618476748
+    },
+    {
+      "id": "shr_median_expanded_missing_12_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0321694931015372
+    },
+    {
+      "id": "shr_median_expanded_missing_12_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 16,
+        "resp_rate_mean": 15,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 61,
+        "age": 52,
+        "SHR": null
+      },
+      "expected": 0.088893610984087
+    },
+    {
+      "id": "shr_median_expanded_missing_13_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0444147992879152
+    },
+    {
+      "id": "shr_median_expanded_missing_13_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 15.25,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 61.5,
+        "age": 53,
+        "SHR": null
+      },
+      "expected": 0.0875454874709249
+    },
+    {
+      "id": "shr_median_expanded_missing_14_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0370708215050399
+    },
+    {
+      "id": "shr_median_expanded_missing_14_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 16.6666666666667,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": 62,
+        "age": 54,
+        "SHR": null
+      },
+      "expected": 0.15133422203362
+    },
+    {
+      "id": "shr_median_expanded_missing_15_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0444576255045831
+    },
+    {
+      "id": "shr_median_expanded_missing_15_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": 62.5,
+        "age": 55,
+        "SHR": null
+      },
+      "expected": 0.176365877874196
+    },
+    {
+      "id": "shr_median_expanded_missing_16_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0380290742963552
+    },
+    {
+      "id": "shr_median_expanded_missing_16_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 17.3333333333333,
+        "resp_rate_mean": 16,
+        "stroke": 0,
+        "wbc": 8.33333333333333,
+        "bun_mg.dL_min": 21,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 56,
+        "SHR": null
+      },
+      "expected": 0.0438932253047824
+    },
+    {
+      "id": "shr_median_expanded_missing_17_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0618755840696394
+    },
+    {
+      "id": "shr_median_expanded_missing_17_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 16.25,
+        "stroke": 1,
+        "wbc": 8.66666666666667,
+        "bun_mg.dL_min": 22,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 57,
+        "SHR": null
+      },
+      "expected": 0.0450164059177041
+    },
+    {
+      "id": "shr_median_expanded_missing_18_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0402641874738038
+    },
+    {
+      "id": "shr_median_expanded_missing_18_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 18,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 9,
+        "bun_mg.dL_min": 23,
+        "af": 1,
+        "mbp_mean": null,
+        "age": 58,
+        "SHR": null
+      },
+      "expected": 0.102563910931349
+    },
+    {
+      "id": "shr_median_expanded_missing_19_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0456084670498967
+    },
+    {
+      "id": "shr_median_expanded_missing_19_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": 9.33333333333333,
+        "bun_mg.dL_min": 24,
+        "af": 1,
+        "mbp_mean": null,
+        "age": 59,
+        "SHR": null
+      },
+      "expected": 0.0855250252410769
+    },
+    {
+      "id": "shr_median_expanded_missing_20_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0417597031220794
+    },
+    {
+      "id": "shr_median_expanded_missing_20_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 18.6666666666667,
+        "resp_rate_mean": 17,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 60,
+        "SHR": null
+      },
+      "expected": 0.034225080627948
+    },
+    {
+      "id": "shr_median_expanded_missing_21_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0525799689814448
+    },
+    {
+      "id": "shr_median_expanded_missing_21_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 17.25,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": 26,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 61,
+        "SHR": null
+      },
+      "expected": 0.0739016057923436
+    },
+    {
+      "id": "shr_median_expanded_missing_22_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0309649069793522
+    },
+    {
+      "id": "shr_median_expanded_missing_22_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 19.3333333333333,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 27,
+        "af": 1,
+        "mbp_mean": null,
+        "age": 62,
+        "SHR": null
+      },
+      "expected": 0.0657577972859144
+    },
+    {
+      "id": "shr_median_expanded_missing_23_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0854541367851198
+    },
+    {
+      "id": "shr_median_expanded_missing_23_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": 28,
+        "af": 1,
+        "mbp_mean": null,
+        "age": 63,
+        "SHR": null
+      },
+      "expected": 0.136325662583113
+    },
+    {
+      "id": "shr_median_expanded_missing_24_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.03493837332353
+    },
+    {
+      "id": "shr_median_expanded_missing_24_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 20,
+        "resp_rate_mean": 18,
+        "stroke": 0,
+        "wbc": 11,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 64,
+        "SHR": null
+      },
+      "expected": 0.0259536060504615
+    },
+    {
+      "id": "shr_median_expanded_missing_25_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0727682885713875
+    },
+    {
+      "id": "shr_median_expanded_missing_25_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 18.25,
+        "stroke": 1,
+        "wbc": 11.3333333333333,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 65,
+        "SHR": null
+      },
+      "expected": 0.0527127722278237
+    },
+    {
+      "id": "shr_median_expanded_missing_26_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0364878975786269
+    },
+    {
+      "id": "shr_median_expanded_missing_26_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 20.6666666666667,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 11.6666666666667,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": null,
+        "age": 66,
+        "SHR": null
+      },
+      "expected": 0.0582668263465166
+    },
+    {
+      "id": "shr_median_expanded_missing_27_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0617060655727983
+    },
+    {
+      "id": "shr_median_expanded_missing_27_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": 12,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.111615299992263
+    },
+    {
+      "id": "shr_median_expanded_missing_28_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0383041237480938
+    },
+    {
+      "id": "shr_median_expanded_missing_28_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 21.3333333333333,
+        "resp_rate_mean": 19,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 68,
+        "SHR": null
+      },
+      "expected": 0.0369421437382698
+    },
+    {
+      "id": "shr_median_expanded_missing_29_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0428929441608489
+    },
+    {
+      "id": "shr_median_expanded_missing_29_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 19.25,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 69,
+        "SHR": null
+      },
+      "expected": 0.110868609696627
+    },
+    {
+      "id": "shr_median_expanded_missing_30_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0252761191688478
+    },
+    {
+      "id": "shr_median_expanded_missing_30_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 22,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": null,
+        "age": 70,
+        "SHR": null
+      },
+      "expected": 0.0766635788604617
+    },
+    {
+      "id": "shr_median_expanded_missing_31_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": 67,
+        "SHR": null
+      },
+      "expected": 0.0330789721105248
+    },
+    {
+      "id": "shr_median_expanded_missing_31_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": null,
+        "age": 71,
+        "SHR": null
+      },
+      "expected": 0.121812013536692
+    },
+    {
+      "id": "shr_median_expanded_missing_32_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0410838395357132
+    },
+    {
+      "id": "shr_median_expanded_missing_32_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 22.6666666666667,
+        "resp_rate_mean": 20,
+        "stroke": 0,
+        "wbc": 13.6666666666667,
+        "bun_mg.dL_min": 37,
+        "af": 0,
+        "mbp_mean": 71,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0877109993249178
+    },
+    {
+      "id": "shr_median_expanded_missing_33_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0546564879827201
+    },
+    {
+      "id": "shr_median_expanded_missing_33_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 20.25,
+        "stroke": 1,
+        "wbc": 14,
+        "bun_mg.dL_min": 38,
+        "af": 0,
+        "mbp_mean": 71.5,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.31300889775157
+    },
+    {
+      "id": "shr_median_expanded_missing_34_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0298199445009232
+    },
+    {
+      "id": "shr_median_expanded_missing_34_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 23.3333333333333,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 14.3333333333333,
+        "bun_mg.dL_min": 39,
+        "af": 1,
+        "mbp_mean": 72,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.156543620862067
+    },
+    {
+      "id": "shr_median_expanded_missing_35_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0558327132835984
+    },
+    {
+      "id": "shr_median_expanded_missing_35_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": 14.6666666666667,
+        "bun_mg.dL_min": 40,
+        "af": 1,
+        "mbp_mean": 72.5,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.37670625820756
+    },
+    {
+      "id": "shr_median_expanded_missing_36_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0449943410232663
+    },
+    {
+      "id": "shr_median_expanded_missing_36_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 24,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 41,
+        "af": 0,
+        "mbp_mean": 73,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0923238478600979
+    },
+    {
+      "id": "shr_median_expanded_missing_37_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0648319453001022
+    },
+    {
+      "id": "shr_median_expanded_missing_37_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21.25,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": 42,
+        "af": 0,
+        "mbp_mean": 73.5,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.302426130324602
+    },
+    {
+      "id": "shr_median_expanded_missing_38_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0416078605689108
+    },
+    {
+      "id": "shr_median_expanded_missing_38_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 24.6666666666667,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 43,
+        "af": 1,
+        "mbp_mean": 74,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.132386776804924
+    },
+    {
+      "id": "shr_median_expanded_missing_39_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0573461000807583
+    },
+    {
+      "id": "shr_median_expanded_missing_39_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": 44,
+        "af": 1,
+        "mbp_mean": 74.5,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.367226463928819
+    },
+    {
+      "id": "shr_median_expanded_missing_40_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0370559466071427
+    },
+    {
+      "id": "shr_median_expanded_missing_40_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 25.3333333333333,
+        "resp_rate_mean": 22,
+        "stroke": 0,
+        "wbc": 16.3333333333333,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 75,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0703267568722367
+    },
+    {
+      "id": "shr_median_expanded_missing_41_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0497019464150071
+    },
+    {
+      "id": "shr_median_expanded_missing_41_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 22.25,
+        "stroke": 1,
+        "wbc": 16.6666666666667,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 75.5,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.322455324232578
+    },
+    {
+      "id": "shr_median_expanded_missing_42_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0264533741399646
+    },
+    {
+      "id": "shr_median_expanded_missing_42_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 26,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 17,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": 76,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0928867127746344
+    },
+    {
+      "id": "shr_median_expanded_missing_43_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0288832503370941
+    },
+    {
+      "id": "shr_median_expanded_missing_43_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": 17.3333333333333,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": 76.5,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.258572998642921
+    },
+    {
+      "id": "shr_median_expanded_missing_44_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0419450540095568
+    },
+    {
+      "id": "shr_median_expanded_missing_44_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 26.6666666666667,
+        "resp_rate_mean": 23,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 77,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0550645748153329
+    },
+    {
+      "id": "shr_median_expanded_missing_45_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0446925769560039
+    },
+    {
+      "id": "shr_median_expanded_missing_45_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 23.25,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 77.5,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.184980646148324
+    },
+    {
+      "id": "shr_median_expanded_missing_46_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0347347675822675
+    },
+    {
+      "id": "shr_median_expanded_missing_46_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 27.3333333333333,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": 78,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0583530515432358
+    },
+    {
+      "id": "shr_median_expanded_missing_47_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": 80,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0601112404838204
+    },
+    {
+      "id": "shr_median_expanded_missing_47_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": 78.5,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.14987910836935
+    },
+    {
+      "id": "shr_median_expanded_missing_48_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0441334857605398
+    },
+    {
+      "id": "shr_median_expanded_missing_48_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 28,
+        "resp_rate_mean": 24,
+        "stroke": 0,
+        "wbc": 19,
+        "bun_mg.dL_min": 53,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.137811030820012
+    },
+    {
+      "id": "shr_median_expanded_missing_49_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0612458566203713
+    },
+    {
+      "id": "shr_median_expanded_missing_49_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 24.25,
+        "stroke": 1,
+        "wbc": 19.3333333333333,
+        "bun_mg.dL_min": 54,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.472164744138718
+    },
+    {
+      "id": "shr_median_expanded_missing_50_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0417854088358581
+    },
+    {
+      "id": "shr_median_expanded_missing_50_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 28.6666666666667,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 19.6666666666667,
+        "bun_mg.dL_min": 55,
+        "af": 1,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.185324639827013
+    },
+    {
+      "id": "shr_median_expanded_missing_51_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.053503985516727
+    },
+    {
+      "id": "shr_median_expanded_missing_51_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": 20,
+        "bun_mg.dL_min": 56,
+        "af": 1,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.418769440054893
+    },
+    {
+      "id": "shr_median_expanded_missing_52_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0452523632906377
+    },
+    {
+      "id": "shr_median_expanded_missing_52_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 29.3333333333333,
+        "resp_rate_mean": 25,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 57,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.13306083753705
+    },
+    {
+      "id": "shr_median_expanded_missing_53_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0578618704341352
+    },
+    {
+      "id": "shr_median_expanded_missing_53_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 25.25,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": 58,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.315915288031101
+    },
+    {
+      "id": "shr_median_expanded_missing_54_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0450554496608675
+    },
+    {
+      "id": "shr_median_expanded_missing_54_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 30,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 59,
+        "af": 1,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.114409972727299
+    },
+    {
+      "id": "shr_median_expanded_missing_55_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": 25,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0569243357516825
+    },
+    {
+      "id": "shr_median_expanded_missing_55_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": 60,
+        "af": 1,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.302083459496498
+    },
+    {
+      "id": "shr_median_expanded_missing_56_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0556162013672292
+    },
+    {
+      "id": "shr_median_expanded_missing_56_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 30.6666666666667,
+        "resp_rate_mean": 26,
+        "stroke": 0,
+        "wbc": 21.6666666666667,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.144503927230835
+    },
+    {
+      "id": "shr_median_expanded_missing_57_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0636316634714603
+    },
+    {
+      "id": "shr_median_expanded_missing_57_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 26.25,
+        "stroke": 1,
+        "wbc": 22,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.35500273630023
+    },
+    {
+      "id": "shr_median_expanded_missing_58_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0386477852240205
+    },
+    {
+      "id": "shr_median_expanded_missing_58_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 31.3333333333333,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 22.3333333333333,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.143734539300203
+    },
+    {
+      "id": "shr_median_expanded_missing_59_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": 10,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0400137874297798
+    },
+    {
+      "id": "shr_median_expanded_missing_59_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": 22.6666666666667,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.321535969525576
+    },
+    {
+      "id": "shr_median_expanded_missing_60_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.043457808624953
+    },
+    {
+      "id": "shr_median_expanded_missing_60_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 32,
+        "resp_rate_mean": 27,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0708391696214676
+    },
+    {
+      "id": "shr_median_expanded_missing_61_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 21,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0953800354152918
+    },
+    {
+      "id": "shr_median_expanded_missing_61_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": 27.25,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.199542503245175
+    },
+    {
+      "id": "shr_median_expanded_missing_62_0",
+      "input": {
+        "bicarbonate_mEq.L_min": 23,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0352667816914618
+    },
+    {
+      "id": "shr_median_expanded_missing_62_1",
+      "input": {
+        "bicarbonate_mEq.L_min": 32.6666666666667,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.059155223146081
+    },
+    {
+      "id": "shr_median_expanded_missing_63_0",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 0,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 0,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.0549245382659137
+    },
+    {
+      "id": "shr_median_expanded_missing_63_1",
+      "input": {
+        "bicarbonate_mEq.L_min": null,
+        "resp_rate_mean": null,
+        "stroke": 1,
+        "wbc": null,
+        "bun_mg.dL_min": null,
+        "af": 1,
+        "mbp_mean": null,
+        "age": null,
+        "SHR": null
+      },
+      "expected": 0.161298790201545
+    }
+  ]
+}

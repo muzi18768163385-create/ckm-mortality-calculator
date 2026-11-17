@@ -1,0 +1,797 @@
+{
+  "status": "passed",
+  "method": "Original R predictor with SHR explicitly set to the training median; numerical agreement only, not clinical validation.",
+  "clinical_validation": false,
+  "shr_training_median": 1.088619,
+  "median_source": "Project owner supplied this value as the training-set SHR median on 2026-11-17, citing: \"Dotted vertical lines mark median SHR 1.088619;\". The training data and original figure were not provided for independent verification.",
+  "cases": 130,
+  "other_missing_patterns": 64,
+  "tolerance": 1e-7,
+  "max_absolute_error": 2.9802322831784522e-9,
+  "explicit_missing_required": true,
+  "input_not_mutated": true,
+  "deterministic": true,
+  "invalid_inputs_rejected": true,
+  "results": [
+    {
+      "id": "shr_median_synthetic_higher_values",
+      "expected": 0.815309128165245,
+      "actual": 0.8153091311454773,
+      "absolute_error": 2.9802322831784522e-9
+    },
+    {
+      "id": "shr_median_synthetic_lower_values",
+      "expected": 0.0157476151827723,
+      "actual": 0.01574761518277228,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_0_0",
+      "expected": 0.034056943655014,
+      "actual": 0.034056943655014035,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_0_1",
+      "expected": 0.0722703669220209,
+      "actual": 0.0722703669220209,
+      "absolute_error": 0
+    },
+    {
+      "id": "shr_median_expanded_missing_1_0",
+      "expected": 0.0590877868235111,
+      "actual": 0.059087786823511124,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_1_1",
+      "expected": 0.0665691995993257,
+      "actual": 0.06656919959932565,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_2_0",
+      "expected": 0.0278064992278814,
+      "actual": 0.027806499414145945,
+      "absolute_error": 1.8626454545422888e-10
+    },
+    {
+      "id": "shr_median_expanded_missing_2_1",
+      "expected": 0.193289562314749,
+      "actual": 0.19328956231474875,
+      "absolute_error": 2.498001805406602e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_3_0",
+      "expected": 0.0314896548166871,
+      "actual": 0.031489654816687106,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "shr_median_expanded_missing_3_1",
+      "expected": 0.0939020192250609,
+      "actual": 0.09390201922506095,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_4_0",
+      "expected": 0.0362699132412672,
+      "actual": 0.0362699132412672,
+      "absolute_error": 0
+    },
+    {
+      "id": "shr_median_expanded_missing_4_1",
+      "expected": 0.0753489293158054,
+      "actual": 0.07534892931580543,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_5_0",
+      "expected": 0.0487766260281205,
+      "actual": 0.048776626028120516,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_5_1",
+      "expected": 0.0652821337804198,
+      "actual": 0.06528213378041983,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_6_0",
+      "expected": 0.0312571703456342,
+      "actual": 0.03125717034563422,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_6_1",
+      "expected": 0.190487635880709,
+      "actual": 0.1904876358807087,
+      "absolute_error": 3.0531133177191805e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_7_0",
+      "expected": 0.0324274356476963,
+      "actual": 0.032427435647696255,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_7_1",
+      "expected": 0.140332735143602,
+      "actual": 0.1403327351436019,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_8_0",
+      "expected": 0.0303108313120902,
+      "actual": 0.030310831498354673,
+      "absolute_error": 1.862644725958429e-10
+    },
+    {
+      "id": "shr_median_expanded_missing_8_1",
+      "expected": 0.0823245024308562,
+      "actual": 0.0823245020583272,
+      "absolute_error": 3.725290076417309e-10
+    },
+    {
+      "id": "shr_median_expanded_missing_9_0",
+      "expected": 0.0394487082958221,
+      "actual": 0.039448708295822144,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_9_1",
+      "expected": 0.0664125524461269,
+      "actual": 0.06641255244612694,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_10_0",
+      "expected": 0.0280942383222282,
+      "actual": 0.028094238322228193,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "shr_median_expanded_missing_10_1",
+      "expected": 0.212947559729218,
+      "actual": 0.21294755972921847,
+      "absolute_error": 4.718447854656915e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_11_0",
+      "expected": 0.0321691110730171,
+      "actual": 0.03216911107301712,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_11_1",
+      "expected": 0.114877618476748,
+      "actual": 0.11487761847674846,
+      "absolute_error": 4.579669976578771e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_12_0",
+      "expected": 0.0321694931015372,
+      "actual": 0.03216949310153723,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_12_1",
+      "expected": 0.088893610984087,
+      "actual": 0.08889361098408699,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_13_0",
+      "expected": 0.0444147992879152,
+      "actual": 0.04441479928791523,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_13_1",
+      "expected": 0.0875454874709249,
+      "actual": 0.08754548747092486,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_14_0",
+      "expected": 0.0370708215050399,
+      "actual": 0.03707082150503993,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_14_1",
+      "expected": 0.15133422203362,
+      "actual": 0.15133422203361988,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_15_0",
+      "expected": 0.0444576255045831,
+      "actual": 0.04445762550458312,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_15_1",
+      "expected": 0.176365877874196,
+      "actual": 0.17636587787419558,
+      "absolute_error": 4.163336342344337e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_16_0",
+      "expected": 0.0380290742963552,
+      "actual": 0.03802907429635525,
+      "absolute_error": 4.85722573273506e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_16_1",
+      "expected": 0.0438932253047824,
+      "actual": 0.04389322530478239,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_17_0",
+      "expected": 0.0618755840696394,
+      "actual": 0.061875584069639444,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_17_1",
+      "expected": 0.0450164059177041,
+      "actual": 0.0450164059177041,
+      "absolute_error": 0
+    },
+    {
+      "id": "shr_median_expanded_missing_18_0",
+      "expected": 0.0402641874738038,
+      "actual": 0.04026418747380376,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_18_1",
+      "expected": 0.102563910931349,
+      "actual": 0.1025639109313488,
+      "absolute_error": 2.0816681711721685e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_19_0",
+      "expected": 0.0456084670498967,
+      "actual": 0.04560846704989672,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_19_1",
+      "expected": 0.0855250252410769,
+      "actual": 0.08552502524107694,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_20_0",
+      "expected": 0.0417597031220794,
+      "actual": 0.04175970312207937,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_20_1",
+      "expected": 0.034225080627948,
+      "actual": 0.034225080627948046,
+      "absolute_error": 4.85722573273506e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_21_0",
+      "expected": 0.0525799689814448,
+      "actual": 0.05257996898144483,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_21_1",
+      "expected": 0.0739016057923436,
+      "actual": 0.07390160597860813,
+      "absolute_error": 1.8626453157644107e-10
+    },
+    {
+      "id": "shr_median_expanded_missing_22_0",
+      "expected": 0.0309649069793522,
+      "actual": 0.030964906979352235,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_22_1",
+      "expected": 0.0657577972859144,
+      "actual": 0.06575779728591442,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_23_0",
+      "expected": 0.0854541367851198,
+      "actual": 0.08545413669198751,
+      "absolute_error": 9.313229354379615e-11
+    },
+    {
+      "id": "shr_median_expanded_missing_23_1",
+      "expected": 0.136325662583113,
+      "actual": 0.1363256625831127,
+      "absolute_error": 2.7755575615628914e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_24_0",
+      "expected": 0.03493837332353,
+      "actual": 0.03493837332352996,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_24_1",
+      "expected": 0.0259536060504615,
+      "actual": 0.02595360605046153,
+      "absolute_error": 3.122502256758253e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_25_0",
+      "expected": 0.0727682885713875,
+      "actual": 0.07276828857138753,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_25_1",
+      "expected": 0.0527127722278237,
+      "actual": 0.05271277222782374,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_26_0",
+      "expected": 0.0364878975786269,
+      "actual": 0.036487897578626874,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_26_1",
+      "expected": 0.0582668263465166,
+      "actual": 0.05826682634651661,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "shr_median_expanded_missing_27_0",
+      "expected": 0.0617060655727983,
+      "actual": 0.06170606557279825,
+      "absolute_error": 4.85722573273506e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_27_1",
+      "expected": 0.111615299992263,
+      "actual": 0.11161529999226331,
+      "absolute_error": 3.191891195797325e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_28_0",
+      "expected": 0.0383041237480938,
+      "actual": 0.038304123748093846,
+      "absolute_error": 4.85722573273506e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_28_1",
+      "expected": 0.0369421437382698,
+      "actual": 0.0369421437382698,
+      "absolute_error": 0
+    },
+    {
+      "id": "shr_median_expanded_missing_29_0",
+      "expected": 0.0428929441608489,
+      "actual": 0.04289294416084886,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_29_1",
+      "expected": 0.110868609696627,
+      "actual": 0.11086860969662667,
+      "absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_30_0",
+      "expected": 0.0252761191688478,
+      "actual": 0.0252761191688478,
+      "absolute_error": 0
+    },
+    {
+      "id": "shr_median_expanded_missing_30_1",
+      "expected": 0.0766635788604617,
+      "actual": 0.07666357886046171,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_31_0",
+      "expected": 0.0330789721105248,
+      "actual": 0.033078972110524775,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_31_1",
+      "expected": 0.121812013536692,
+      "actual": 0.12181201353669166,
+      "absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_32_0",
+      "expected": 0.0410838395357132,
+      "actual": 0.04108383953571319,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "shr_median_expanded_missing_32_1",
+      "expected": 0.0877109993249178,
+      "actual": 0.0877109993249178,
+      "absolute_error": 0
+    },
+    {
+      "id": "shr_median_expanded_missing_33_0",
+      "expected": 0.0546564879827201,
+      "actual": 0.05465648798272014,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_33_1",
+      "expected": 0.31300889775157,
+      "actual": 0.31300889775156976,
+      "absolute_error": 2.220446049250313e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_34_0",
+      "expected": 0.0298199445009232,
+      "actual": 0.029819944500923158,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_34_1",
+      "expected": 0.156543620862067,
+      "actual": 0.15654362086206675,
+      "absolute_error": 2.498001805406602e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_35_0",
+      "expected": 0.0558327132835984,
+      "actual": 0.05583271328359842,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_35_1",
+      "expected": 0.37670625820756,
+      "actual": 0.3767062582075596,
+      "absolute_error": 3.885780586188048e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_36_0",
+      "expected": 0.0449943410232663,
+      "actual": 0.04499434102326631,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_36_1",
+      "expected": 0.0923238478600979,
+      "actual": 0.09232384786009788,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_37_0",
+      "expected": 0.0648319453001022,
+      "actual": 0.06483194530010224,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_37_1",
+      "expected": 0.302426130324602,
+      "actual": 0.30242613032460214,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_38_0",
+      "expected": 0.0416078605689108,
+      "actual": 0.04160786056891084,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_38_1",
+      "expected": 0.132386776804924,
+      "actual": 0.132386776804924,
+      "absolute_error": 0
+    },
+    {
+      "id": "shr_median_expanded_missing_39_0",
+      "expected": 0.0573461000807583,
+      "actual": 0.057346100080758335,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_39_1",
+      "expected": 0.367226463928819,
+      "actual": 0.3672264639288187,
+      "absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_40_0",
+      "expected": 0.0370559466071427,
+      "actual": 0.03705594660714269,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "shr_median_expanded_missing_40_1",
+      "expected": 0.0703267568722367,
+      "actual": 0.0703267564997077,
+      "absolute_error": 3.725290076417309e-10
+    },
+    {
+      "id": "shr_median_expanded_missing_41_0",
+      "expected": 0.0497019464150071,
+      "actual": 0.049701946415007116,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_41_1",
+      "expected": 0.322455324232578,
+      "actual": 0.3224553242325783,
+      "absolute_error": 2.7755575615628914e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_42_0",
+      "expected": 0.0264533741399646,
+      "actual": 0.02645337413996458,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_42_1",
+      "expected": 0.0928867127746344,
+      "actual": 0.09288671277463437,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_43_0",
+      "expected": 0.0288832503370941,
+      "actual": 0.028883250243961812,
+      "absolute_error": 9.313228660490225e-11
+    },
+    {
+      "id": "shr_median_expanded_missing_43_1",
+      "expected": 0.258572998642921,
+      "actual": 0.25857299864292144,
+      "absolute_error": 4.440892098500626e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_44_0",
+      "expected": 0.0419450540095568,
+      "actual": 0.04194505400955677,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_44_1",
+      "expected": 0.0550645748153329,
+      "actual": 0.05506457481533289,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_45_0",
+      "expected": 0.0446925769560039,
+      "actual": 0.044692576956003906,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "shr_median_expanded_missing_45_1",
+      "expected": 0.184980646148324,
+      "actual": 0.18498064614832402,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_46_0",
+      "expected": 0.0347347675822675,
+      "actual": 0.034734767582267526,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_46_1",
+      "expected": 0.0583530515432358,
+      "actual": 0.05835305154323578,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_47_0",
+      "expected": 0.0601112404838204,
+      "actual": 0.06011124048382044,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_47_1",
+      "expected": 0.14987910836935,
+      "actual": 0.14987910836935042,
+      "absolute_error": 4.163336342344337e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_48_0",
+      "expected": 0.0441334857605398,
+      "actual": 0.04413348576053977,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_48_1",
+      "expected": 0.137811030820012,
+      "actual": 0.1378110308200121,
+      "absolute_error": 8.326672684688674e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_49_0",
+      "expected": 0.0612458566203713,
+      "actual": 0.06124585662037134,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_49_1",
+      "expected": 0.472164744138718,
+      "actual": 0.4721647441387177,
+      "absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_50_0",
+      "expected": 0.0417854088358581,
+      "actual": 0.04178540883585811,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "shr_median_expanded_missing_50_1",
+      "expected": 0.185324639827013,
+      "actual": 0.18532463982701303,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_51_0",
+      "expected": 0.053503985516727,
+      "actual": 0.05350398551672697,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_51_1",
+      "expected": 0.418769440054893,
+      "actual": 0.41876944005489347,
+      "absolute_error": 4.440892098500626e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_52_0",
+      "expected": 0.0452523632906377,
+      "actual": 0.04525236329063773,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_52_1",
+      "expected": 0.13306083753705,
+      "actual": 0.13306083753705025,
+      "absolute_error": 2.498001805406602e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_53_0",
+      "expected": 0.0578618704341352,
+      "actual": 0.057861870434135196,
+      "absolute_error": 6.938893903907228e-18
+    },
+    {
+      "id": "shr_median_expanded_missing_53_1",
+      "expected": 0.315915288031101,
+      "actual": 0.31591528803110125,
+      "absolute_error": 2.220446049250313e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_54_0",
+      "expected": 0.0450554496608675,
+      "actual": 0.045055449660867455,
+      "absolute_error": 4.163336342344337e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_54_1",
+      "expected": 0.114409972727299,
+      "actual": 0.11440997272729873,
+      "absolute_error": 2.636779683484747e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_55_0",
+      "expected": 0.0569243357516825,
+      "actual": 0.05692433575168252,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_55_1",
+      "expected": 0.302083459496498,
+      "actual": 0.3020834594964981,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_56_0",
+      "expected": 0.0556162013672292,
+      "actual": 0.05561620136722922,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_56_1",
+      "expected": 0.144503927230835,
+      "actual": 0.14450392723083497,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_57_0",
+      "expected": 0.0636316634714603,
+      "actual": 0.06363166403025389,
+      "absolute_error": 5.587935808515354e-10
+    },
+    {
+      "id": "shr_median_expanded_missing_57_1",
+      "expected": 0.35500273630023,
+      "actual": 0.35500273779034613,
+      "absolute_error": 1.4901161415892261e-9
+    },
+    {
+      "id": "shr_median_expanded_missing_58_0",
+      "expected": 0.0386477852240205,
+      "actual": 0.03864778522402048,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_58_1",
+      "expected": 0.143734539300203,
+      "actual": 0.14373453930020333,
+      "absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_59_0",
+      "expected": 0.0400137874297798,
+      "actual": 0.04001378742977977,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_59_1",
+      "expected": 0.321535969525576,
+      "actual": 0.3215359695255756,
+      "absolute_error": 3.885780586188048e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_60_0",
+      "expected": 0.043457808624953,
+      "actual": 0.043457808624953034,
+      "absolute_error": 3.469446951953614e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_60_1",
+      "expected": 0.0708391696214676,
+      "actual": 0.0708391696214676,
+      "absolute_error": 0
+    },
+    {
+      "id": "shr_median_expanded_missing_61_0",
+      "expected": 0.0953800354152918,
+      "actual": 0.09538003541529179,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_61_1",
+      "expected": 0.199542503245175,
+      "actual": 0.1995425032451749,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "id": "shr_median_expanded_missing_62_0",
+      "expected": 0.0352667816914618,
+      "actual": 0.0352667816914618,
+      "absolute_error": 0
+    },
+    {
+      "id": "shr_median_expanded_missing_62_1",
+      "expected": 0.059155223146081,
+      "actual": 0.05915522240102291,
+      "absolute_error": 7.450580916112948e-10
+    },
+    {
+      "id": "shr_median_expanded_missing_63_0",
+      "expected": 0.0549245382659137,
+      "actual": 0.054924538265913724,
+      "absolute_error": 2.0816681711721685e-17
+    },
+    {
+      "id": "shr_median_expanded_missing_63_1",
+      "expected": 0.161298790201545,
+      "actual": 0.16129879020154475,
+      "absolute_error": 2.498001805406602e-16
+    }
+  ]
+}

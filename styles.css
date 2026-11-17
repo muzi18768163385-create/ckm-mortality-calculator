@@ -17,3 +17,12 @@
 .footer-author>span{font-size:12px;color:var(--muted)}
 .footer-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 @media(max-width:480px){.topbar-inner{height:auto;min-height:73px;padding-top:16px;padding-bottom:16px;gap:12px;flex-wrap:wrap}.footer-meta{flex-direction:column;gap:3px}}
+
+/* Keep the missing-SHR assumption visible in both screen and printed results. */
+.scenario-note{padding:12px 14px;margin:0 0 20px;border:1px solid #c89a42;border-left:4px solid #a16b10;border-radius:6px;background:#fff8e9;color:#654609;font-size:12px;line-height:1.8;overflow-wrap:anywhere}
+.scenario-note strong{display:block;font-weight:650}
+.scenario-note p{margin:5px 0 0}
+.result-card .scenario-note{font-size:11px}
+#risk-caption{text-align:center;padding:0 10px}
+#shr-median-value{overflow-wrap:anywhere}
+@media print{.scenario-note{break-inside:avoid;color:#382600;border-color:#654609;background:#fff;font-size:10px}.result-card .scenario-note{font-size:10px}}
